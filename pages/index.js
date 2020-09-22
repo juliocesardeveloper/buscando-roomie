@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 
+import Card from '../components/Card'
+
 export default function Home () {
   return (
     <div className={styles.container}>
@@ -49,6 +51,14 @@ export default function Home () {
           </a>
         </div>
       </main>
+
+      <Card
+        isLiked={false}
+        photoPlace={'https://cf.bstatic.com/images/hotel/max1024x768/238/238751575.jpg'}
+        price={'100.000'} city={'Medellin'}
+        photoHost={'https://pbs.twimg.com/profile_images/1112848027050565633/G0F2EtMn_400x400.jpg'}
+        hostName={'Name'}
+      />
 
       <footer className={styles.footer}>
         <a
