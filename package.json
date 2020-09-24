@@ -6,9 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint" : "eslint . --fix"
+    "lint": "eslint . --fix"
   },
   "dependencies": {
+    "jquery": "^3.5.1",
     "next": "9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
