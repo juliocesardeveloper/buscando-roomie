@@ -1,45 +1,52 @@
-.container {
-  left: 0;
-  top: 0;
+.principalContainer {
+  width: 100vw;
   position: absolute;
-  width: 400px;
-  height: 435px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #f6f8ff;
-  margin: 8% auto;
-  border-radius: 6px;
-  div {
-    height: 84%;
-    width: 80%;
-    margin: 7% 10%;
-    display: grid;
-    grid-template-rows: 4% 20% 65% 16%;
-    justify-items: center;
-    span {
-      font-weight: 700;
-      justify-self: flex-end;
-      cursor: pointer;
-    }
-    h2 {
-      justify-self: start;
-    }
-    form {
-      height: 100%;
-      width: 100%;
+  top: 0;
+  bottom: 0;
+  display: grid;
+  background-color: lighten($color: grey, $amount: 30);
+  place-items: center;
+  .container {
+    width: 400px;
+    height: 435px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f6f8ff;
+    margin: 8% auto;
+    border-radius: 6px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    div {
+      height: 84%;
+      width: 80%;
+      margin: 7% 10%;
       display: grid;
-      grid-template-rows: auto;
+      grid-template-rows: 4% 20% 65% 16%;
       justify-items: center;
-      align-content: space-around;
+      span {
+        font-weight: 700;
+        justify-self: flex-end;
+        cursor: pointer;
+      }
+      h2 {
+        justify-self: start;
+      }
+      form {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-rows: auto;
+        justify-items: center;
+        align-content: space-around;
+      }
+      p {
+        align-self: end;
+      }
     }
-    p {
-      align-self: end;
+    a {
+      color: blue;
+      text-decoration: underline;
     }
-  }
-  a {
-    color: blue;
-    text-decoration: underline;
   }
 }
 

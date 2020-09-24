@@ -8,31 +8,30 @@ export default function Home() {
   let [login, setLogin] = useState(false);
   let [register, setRegister] = useState(false);
 
-  const showModal = () => {
+  const showLoginModal = () => {
     setLogin((login = true));
   };
 
-  const hideModal = () => {
+  const hideLoginModal = () => {
     setLogin((login = false));
   };
 
-  const showModal2 = () => {
+  const showRegisterModal = () => {
     setRegister((register = true));
   };
 
-  const hideModal2 = () => {
+  const hideRegisterModal = () => {
     setRegister((register = false));
   };
 
   return (
     <div>
-      <h1>Hola</h1>
-      <Login show={login} handleClose={hideModal} />
-      <Register show={register} handleClose={hideModal2} />
-      <button type="button" onClick={showModal}>
+      <Login show={login} handleClose={hideLoginModal} />
+      <Register show={register} handleClose={hideRegisterModal} />
+      <button type="button" onClick={showLoginModal}>
         Login
       </button>
-      <button type="button" onClick={showModal2}>
+      <button type="button" onClick={showRegisterModal}>
         Register
       </button>
     </div>
