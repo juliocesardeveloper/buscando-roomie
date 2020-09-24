@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useState } from "react";
 import Login from "../components/Login";
 import Register from "../components/Register";
+import Card from "../components/Card";
 
 export default function Home() {
   let [login, setLogin] = useState(false);
@@ -34,6 +35,18 @@ export default function Home() {
       <button type="button" onClick={showRegisterModal}>
         Register
       </button>
+      <Card
+        isLiked={false}
+        photoPlace={
+          "https://cf.bstatic.com/images/hotel/max1024x768/238/238751575.jpg"
+        }
+        price={"100.000"}
+        city={"Medellin"}
+        photoHost={
+          "https://pbs.twimg.com/profile_images/1112848027050565633/G0F2EtMn_400x400.jpg"
+        }
+        hostName={"Name"}
+      />
     </div>
   );
 }
