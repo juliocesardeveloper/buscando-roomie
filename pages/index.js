@@ -4,6 +4,7 @@ import { useState } from "react";
 import Login from "../components/Login";
 import Register from "../components/Register";
 import Card from "../components/Card";
+import Header from '../components/Header';
 
 export default function Home() {
   let [login, setLogin] = useState(false);
@@ -27,6 +28,7 @@ export default function Home() {
 
   return (
     <div>
+      <Header />
       <Login show={login} handleClose={hideLoginModal} />
       <Register show={register} handleClose={hideRegisterModal} />
       <button type="button" onClick={showLoginModal}>
