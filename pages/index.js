@@ -11,6 +11,7 @@ export default function Home() {
 
   const showLoginModal = () => {
     setLogin((login = true));
+    setRegister((register = false));
   };
 
   const hideLoginModal = () => {
@@ -19,6 +20,7 @@ export default function Home() {
 
   const showRegisterModal = () => {
     setRegister((register = true));
+    setLogin((login = false));
   };
 
   const hideRegisterModal = () => {
