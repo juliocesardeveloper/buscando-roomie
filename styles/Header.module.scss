@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
+.header{
+  width: minmax(350px, maxcontent );
+  height: minmax(70px, maxcontent);
+  background-color: #99AFFF;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-bar{
+  width: minmax(360px, maxcontent );
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-bar-img-logo{
+  width: 37.6px;
+  height: 37.6px;
+  background-image: url("./img/roomie-finder-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 20px;
+}
+
+.font-menu:checked ~ .nav-list{
+  display: flex;
+}
+
+.font-menu{
+  display: none;
+}
+
+.fa-bars{
+  font-size: 26px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.slide-menu-nav{
+  display: inline-block;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.nav-list{
+  display: none;
+  list-style: none;
+  padding: inherit;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 89px;
+}
+
+.nav-list > li > a{
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.nav-list > li > a:hover{
+  color: white;
+}
+
+@media only screen and (min-width:64em) { 
+  .header{
+    flex-direction: row;
+    align-items: center;
+    max-height: 70px;
+  }
+
+  .header-bar-img-logo{
+    background-image: url("./img/roomie-finder-official-logo.svg");
+    min-width: 150px;
+  }
+
+  #slide-nav-button{
+    display: none;
+  }
+
+  #slide-menu{
+    display: inline-block;
+  }
+
+  .nav-list{
+    display: flex;
+    flex-direction: row;
+    min-width: 400px;
+  }
+}
