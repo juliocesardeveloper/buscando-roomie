@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+/**
+ * All files to be compiled
+ */
+
+/**
+ * Variables
+ **/
+ @import "./reset";
+
+ /**
+  * Variables
+  **/
+ @import "./variables";
+ 
+ /**
+  * Animations
+  **/
+ @import "./animations/index.scss";
+ 
+
+ 
+ /**
+     * COMPONENTS
+ **/
+ @import "./Components/Card.module.scss";
+ @import "./Components/Home.module.scss";
+
+ 
+ /**
+  * LAYOUTS
+  **/
+ 
