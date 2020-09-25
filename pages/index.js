@@ -1,30 +1,30 @@
-import Head from "next/head";
+import Head from 'next/head'
 // import styles from "../styles/Home.module.scss";
-import { useState } from "react";
-import Login from "../components/Login";
-import Register from "../components/Register";
-import Card from "../components/Card";
-import Header from '../components/Header';
+import { useState } from 'react'
+import Login from '../components/Login'
+import Register from '../components/Register'
+import Card from '../components/Card'
+import Header from '../components/Header'
 
-export default function Home() {
-  let [login, setLogin] = useState(false);
-  let [register, setRegister] = useState(false);
+export default function Home () {
+  let [login, setLogin] = useState(false)
+  let [register, setRegister] = useState(false)
 
   const showLoginModal = () => {
-    setLogin((login = true));
-  };
+    setLogin((login = true))
+  }
 
   const hideLoginModal = () => {
-    setLogin((login = false));
-  };
+    setLogin((login = false))
+  }
 
   const showRegisterModal = () => {
-    setRegister((register = true));
-  };
+    setRegister((register = true))
+  }
 
   const hideRegisterModal = () => {
-    setRegister((register = false));
-  };
+    setRegister((register = false))
+  }
 
   return (
     <div>
@@ -40,15 +40,15 @@ export default function Home() {
       <Card
         isLiked={false}
         photoPlace={
-          "https://cf.bstatic.com/images/hotel/max1024x768/238/238751575.jpg"
+          'https://cf.bstatic.com/images/hotel/max1024x768/238/238751575.jpg'
         }
-        price={"100.000"}
-        city={"Medellin"}
+        price={'100.000'}
+        city={'Medellin'}
         photoHost={
-          "https://pbs.twimg.com/profile_images/1112848027050565633/G0F2EtMn_400x400.jpg"
+          'https://pbs.twimg.com/profile_images/1112848027050565633/G0F2EtMn_400x400.jpg'
         }
-        hostName={"Name"}
+        hostName={'Name'}
       />
     </div>
-  );
+  )
 }
