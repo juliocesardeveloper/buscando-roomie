@@ -1,8 +1,8 @@
-import style from "../styles/Login.module.scss";
-import Link from "next/link";
+import style from '../styles/Login.module.scss'
+import Link from 'next/link'
 
-export default function Login({ handleClose, show }) {
-  const showHideClassName = show ? style.principalContainer : style.displayNone;
+export default function Login ({ handleClose, show }) {
+  const showHideClassName = show ? style.principalContainer : style.displayNone
   return (
     <div className={showHideClassName}>
       <article className={style.container}>
@@ -34,5 +34,5 @@ export default function Login({ handleClose, show }) {
         </div>
       </article>
     </div>
-  );
+  )
 }
