@@ -3,13 +3,13 @@ import styles from '../styles/Components/Home.module.scss'
 import Login from '../components/Login'
 import Register from '../components/Register'
 import Header from '../components/Header'
-import Footer from '../components/Footer'
 import Search from '../components/Search'
 import Hero from '../components/Hero'
 import Card from '../components/Card'
 
 import { useState, useEffect } from 'react'
 
+// import Footer from '../components/Footer'
 
 export default function Home () {
 
@@ -68,7 +68,10 @@ export default function Home () {
           ))}
         </section>
       </main>
-      <Footer />
+      <div className={styles.footer}>
+        <h1>Footer</h1>
+      </div>
+      {/* <Footer /> */}
     </div>
   )
 }
