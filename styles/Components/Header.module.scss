@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+@import '../variables.scss';
 
 .header{
   width: minmax(350px, maxcontent );
   height: minmax(70px, maxcontent);
   background-color: #99AFFF;
-  border-radius: 10px;
+  border-radius: $border-value;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -12,7 +13,7 @@
 
 .header-bar{
   width: minmax(360px, maxcontent );
-  height: 70px;
+  height: $space-large;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,7 +22,7 @@
 .header-bar-img-logo{
   width: 37.6px;
   height: 37.6px;
-  background-image: url("./img/roomie-finder-icon.svg");
+  background-image: url("../img/roomie-finder-icon.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -55,16 +56,25 @@
   justify-content: space-around;
   align-items: center;
   min-height: 89px;
+  margin: 5px;
 }
 
-.nav-list > li > a{
+.nav-list-item{
+  font-size:20px;
   cursor: pointer;
-  font-size: 20px;
+  border-radius: $border-value;
+  color:$color-Black;
+  padding: $space-micro;
+  border-bottom:  1px solid none;
+  transition: color 1.5s, box-shadow 1s,border-bottom 2s;
 }
 
-.nav-list > li > a:hover{
-  color: white;
+.nav-list-item:hover{
+  
+  border-bottom:  1px solid none ;
+  box-shadow: $value-shadow-box;
 }
+
 
 @media only screen and (min-width:64em) { 
   .header{
@@ -75,7 +85,7 @@
   }
 
   .header-bar-img-logo{
-    background-image: url("./img/roomie-finder-official-logo.svg");
+    background-image: url("../img/roomie-finder-official-logo.svg");
     min-width: 150px;
   }
 

@@ -11,12 +11,12 @@ const Card = ({ isLiked, photoPlace, price, city, photoHost, hostName }) => {
         className={styles.placePhoto}
         src={photoPlace}
         alt="place photo"/>
-      <div className={styles.hostInfo}>
-        <img src={photoHost} alt="photo host"/>
+      <div className={`${['zoom hostInfo']}`}>
+        <img src={photoHost} alt="photo host" />
         <p>{hostName}</p>
       </div>
       <footer>
-        <p>${price}COP / mes</p>
+        <p className={`${['paragraph']}`}>${price}COP / mes</p>
         <p>{city}</p>
       </footer>
     </section>
