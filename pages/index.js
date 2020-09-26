@@ -25,16 +25,21 @@ export default function Home () {
   let [register, setRegister] = useState(false)
 
   const showLoginModal = () => {
-    setLogin((login = true))
-  }
+
+    setLogin((login = true));
+    setRegister((register = false));
+  };
+
 
   const hideLoginModal = () => {
     setLogin((login = false))
   }
 
   const showRegisterModal = () => {
-    setRegister((register = true))
-  }
+    setRegister((register = true));
+    setLogin((login = false));
+  };
+
 
   const hideRegisterModal = () => {
     setRegister((register = false))

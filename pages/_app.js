@@ -1,15 +1,7 @@
-import '../styles/globals.scss'
-
-// import reducer from '../reducer'
-
-// const initialState = {
-// 	'user': {},
-// 	// loading: false,
-// 	// dataEvents: '',
-// 	// eventsRecents: ''
-// }
-
-// const store = createStore(null, initialState)
+import "../styles/globals.scss";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import reducer from "../reducers/index";
 
 function MyApp ({ Component, pageProps }) {
   return (
@@ -17,4 +9,14 @@ function MyApp ({ Component, pageProps }) {
   )
 }
 
-export default MyApp
+const initialState = { user: {} };
+const store = createStore(reducer, initialState);
+
+function MyApp({ Component, pageProps }) {
+  return (
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
+  );
+}
+export default MyApp;
