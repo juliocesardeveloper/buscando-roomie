@@ -3,10 +3,6 @@ import styles from '../styles/Components/Home.module.scss'
 import Login from '../components/Login'
 import Register from '../components/Register'
 import Header from '../components/Header'
-<<<<<<< HEAD
-import Carousel from '../components/Carousel'
-import Link from 'next/link'
-=======
 import Search from '../components/Search'
 import Hero from '../components/Hero'
 import Card from '../components/Card'
@@ -14,7 +10,6 @@ import Card from '../components/Card'
 import { useState, useEffect } from 'react'
 
 // import Footer from '../components/Footer'
->>>>>>> frontend
 
 export default function Home () {
 
@@ -50,14 +45,6 @@ export default function Home () {
     setRegister((register = false))
   }
 
-  const room = {
-    isLiked: false,
-    photoPlace: 'https://cf.bstatic.com/images/hotel/max1024x768/238/238751575.jpg',
-    price: '100.000',
-    city: 'Medellin',
-    photoHost: 'https://pbs.twimg.com/profile_images/1112848027050565633/G0F2EtMn_400x400.jpg',
-    hostName: 'Name'
-  }
   return (
     <>
     <Header />
@@ -70,11 +57,6 @@ export default function Home () {
       <button type="button" onClick={showRegisterModal}>
         Register
       </button>
-<<<<<<< HEAD
-      <Card room={room} />
-      <Carousel
-        images={[]}/>
-=======
       <Search />
       <Hero
         heroImage={'https://i.picsum.photos/id/943/600/500.jpg?hmac=FDXOi156vidMKBiwEiT5-oVIpP7X4dXd54S1-1xDQRM'}
@@ -87,7 +69,6 @@ export default function Home () {
           ))}
         </section>
       </main>
->>>>>>> frontend
     </div>
     {/* <Footer /> */}
     </>
