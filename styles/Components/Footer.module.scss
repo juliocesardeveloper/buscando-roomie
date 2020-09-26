@@ -43,6 +43,7 @@
   background-color: black;
   color: #99afff;
   min-width: -moz-available;
+  min-width: -webkit-fill-available;
 }
 @media only screen and (min-width:1024px) {
   .footer {
