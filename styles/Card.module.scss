@@ -6,9 +6,9 @@ $color: #99AFFF;
   height: 250px;
   border: 1px solid #50514F;
   border-radius: 11px;
-
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 
   .placePhoto{
     height: 170px;
@@ -31,6 +31,11 @@ $color: #99AFFF;
     p{
       margin: 0;
       font-size: 14px;
+    }
+
+    a{
+      cursor: pointer;
+      color: blue;
     }
   }
 }
