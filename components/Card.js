@@ -1,24 +1,23 @@
 import styles from '../styles/Components/Card.module.scss'
 
-const Card = ({ images, price, location }) => {
-  // const { images, price, location } = data
+const Card = ({ isLiked, photoPlace, price, city, photoHost, hostName }) => {
   return (
     <section className={styles.container}>
-      {/* <img
+      <img
         className={styles.like}
         src={isLiked ? './liked.svg' : 'noLiked.svg'}
-        alt="like"/> */}
+        alt="like"/>
       <img
         className={styles.placePhoto}
-        src={images}
+        src={photoPlace}
         alt="place photo"/>
-      {/* <div className={styles.hostInfo}>
-        <img src={photoHost} alt="photo host"/>
+      <div className={`${['zoom hostInfo']}`}>
+        <img src={photoHost} alt="photo host" />
         <p>{hostName}</p>
-      </div> */}
+      </div>
       <footer>
-        <p>${price}MXN / mes</p>
-        <p>{location}</p>
+        <p className={`${['paragraph']}`}>${price}COP / mes</p>
+        <p>{city}</p>
       </footer>
     </section>
   )
