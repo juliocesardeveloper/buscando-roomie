@@ -1,3 +1,4 @@
+
 import style from "../styles/Login.module.scss";
 import Link from "next/link";
 import { connect } from "react-redux";
@@ -23,8 +24,6 @@ function Login({ handleClose, show, props }) {
     props.loginRequest(form);
     props.history.push("/");
   };
-
-  console.log(form);
 
   return (
     <div className={showHideClassName}>
@@ -61,7 +60,7 @@ function Login({ handleClose, show, props }) {
         </div>
       </article>
     </div>
-  );
+  )
 }
 
 const mapDispatchToProps = {
