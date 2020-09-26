@@ -1,8 +1,10 @@
+@import "./variables.scss";
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: $font-Family-Kumbh, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -14,3 +16,44 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+/**
+ * All files to be compiled
+ */
+
+/**
+ * Reset
+ **/
+//  @import "./reset.scss";
+
+ /**
+  * Variables
+  **/
+ 
+ 
+ /**
+  * Animations
+  **/
+@import "./animations/index.scss";
+ 
+
+ 
+ /**
+     * COMPONENTS
+ **/
+ @import "./Components/Card.module.scss";
+ @import "./Components/Home.module.scss";
+ @import "./Components/Header.module.scss";
+ @import "./Components/Login.module.scss";
+ @import "./Components/Register.module.scss";
+
+ 
+ /**
+  * LAYOUTS
+  **/
+
+
+

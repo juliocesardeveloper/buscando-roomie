@@ -1,23 +1,24 @@
-import styles from '../styles/Card.module.scss'
+import styles from '../styles/Components/Card.module.scss'
 
-const Card = ({ isLiked, photoPlace, price, city, photoHost, hostName }) => {
+const Card = ({ images, price, location }) => {
+  // const { images, price, location } = data
   return (
     <section className={styles.container}>
-      <img
+      {/* <img
         className={styles.like}
         src={isLiked ? './liked.svg' : 'noLiked.svg'}
-        alt="like"/>
+        alt="like"/> */}
       <img
         className={styles.placePhoto}
-        src={photoPlace}
+        src={images}
         alt="place photo"/>
-      <div className={styles.hostInfo}>
+      {/* <div className={styles.hostInfo}>
         <img src={photoHost} alt="photo host"/>
         <p>{hostName}</p>
-      </div>
+      </div> */}
       <footer>
-        <p>${price}COP / mes</p>
-        <p>{city}</p>
+        <p>${price}MXN / mes</p>
+        <p>{location}</p>
       </footer>
     </section>
   )
