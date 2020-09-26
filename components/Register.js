@@ -1,5 +1,5 @@
 
-import style from "../styles/Register.module.scss";
+import style from "../styles/Components/Register.module.scss";
 import Link from "next/link";
 import { connect } from "react-redux";
 import { registerRequest } from "../actions/index";
