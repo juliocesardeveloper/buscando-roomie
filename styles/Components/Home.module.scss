@@ -1,19 +1,23 @@
+@import "../variables.scss";
+
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+  align-items: center;
   display: flex;
   flex-direction: column;
+  font-family: $font-Family-Kumbh;
   justify-content: center;
-  align-items: center;
+  min-height: 100vh;
+  padding: 0 0.5rem;
 }
 
 .main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-gap: 30px 5px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(300px);
+  padding: 0 1rem;
 }
 
 .footer {
