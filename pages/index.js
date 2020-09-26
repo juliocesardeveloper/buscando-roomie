@@ -46,8 +46,9 @@ export default function Home () {
   }
 
   return (
+    <>
+    <Header />
     <div className={styles.container}>
-      <Header />
       <Login show={login} handleClose={hideLoginModal} />
       <Register show={register} handleClose={hideRegisterModal} />
       <button type="button" onClick={showLoginModal}>
@@ -68,8 +69,9 @@ export default function Home () {
           ))}
         </section>
       </main>
-      <Footer />
     </div>
+    <Footer />
+    </>
   )
 }
 
