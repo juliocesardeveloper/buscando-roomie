@@ -1,5 +1,5 @@
 
-import style from "../styles/Components/Login.module.scss";
+import style from "../styles/Login.module.scss";
 import Link from "next/link";
 import { connect } from "react-redux";
 import { loginRequest } from "../actions/index";
