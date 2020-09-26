@@ -1,0 +1,61 @@
+
+@import "../variables.scss";
+
+.container{
+  font-family: $font-Family-Kumbh;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border: 1px solid $color-Border-Card;
+  border-radius:$border-value;
+
+  display: flex;
+  flex-direction: column;
+
+  .placePhoto{
+    height: $space-extraLarge;
+    width: 100%;
+    border-top-left-radius: $border-value;
+    border-top-right-radius: $border-value;
+  }
+
+  footer{
+    background-color: $color-Card;
+    border-bottom-left-radius: $border-value;
+    border-bottom-right-radius: $border-value;
+
+    height: $space-large;
+    padding: $space-micro;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+.like{
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 8px;
+  right: 8px;
+}
+
+.hostInfo{
+  width: 48px;
+  height: 72px;
+  
+  position: absolute;
+  bottom: 30px;
+  right: $border-value;
+
+  p{
+    margin: 0;
+  }
+
+  img{
+    border: 3px solid $color-Card;
+    height: 48px;
+    width: 48px;
+    border-radius: $border-value;
+  }
+}

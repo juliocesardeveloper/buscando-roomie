@@ -1,29 +1,26 @@
-import Link from 'next/link'
-import styles from '../styles/Card.module.scss'
+import styles from '../styles/Components/Card.module.scss'
 
-const Card = ({ room }) => {
-  console.log(room)
+const Card = ({ images, price, location }) => {
+  // const { images, price, location } = data
   return (
-    <Link href={'room/abc'}>
-      <section className={styles.container}>
-        <img
-          className={styles.like}
-          src={room.isLiked ? './liked.svg' : 'noLiked.svg'}
-          alt="like"/>
-        <img
-          className={styles.placePhoto}
-          src={room.photoPlace}
-          alt="place photo"/>
-        <div className={styles.hostInfo}>
-          <img src={room.photoHost} alt="photo host"/>
-          <p>{room.hostName}</p>
-        </div>
-        <footer>
-          <p>${room.price}COP / mes</p>
-          <p>{room.city}</p>
-        </footer>
-      </section>
-    </Link>
+    <section className={styles.container}>
+      {/* <img
+        className={styles.like}
+        src={isLiked ? './liked.svg' : 'noLiked.svg'}
+        alt="like"/> */}
+      <img
+        className={styles.placePhoto}
+        src={images}
+        alt="place photo"/>
+      {/* <div className={styles.hostInfo}>
+        <img src={photoHost} alt="photo host"/>
+        <p>{hostName}</p>
+      </div> */}
+      <footer>
+        <p>${price}MXN / mes</p>
+        <p>{location}</p>
+      </footer>
+    </section>
   )
 }
 
