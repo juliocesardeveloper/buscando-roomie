@@ -1,4 +1,4 @@
-import styles from '../styles/Card.module.scss'
+import styles from '../styles/Components/Card.module.scss'
 
 const Card = ({ isLiked, photoPlace, price, city, photoHost, hostName }) => {
   return (
