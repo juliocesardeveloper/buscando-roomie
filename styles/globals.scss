@@ -14,3 +14,44 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+/**
+ * All files to be compiled
+ */
+
+/**
+ * Reset
+ **/
+//  @import "./reset.scss";
+
+ /**
+  * Variables
+  **/
+ @import "./variables.scss";
+ 
+ /**
+  * Animations
+  **/
+@import "./animations/index.scss";
+ 
+
+ 
+ /**
+     * COMPONENTS
+ **/
+ @import "./Components/Card.module.scss";
+ @import "./Components/Home.module.scss";
+ @import "./Components/Header.module.scss";
+ @import "./Components/Login.module.scss";
+ @import "./Components/Register.module.scss";
+
+ 
+ /**
+  * LAYOUTS
+  **/
+
+
+
