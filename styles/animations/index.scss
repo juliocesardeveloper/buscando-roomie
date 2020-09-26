@@ -1,10 +1,10 @@
-.fadeIn {
+.fade-in {
     -webkit-animation-duration: 4s;
     animation-duration: 4s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
+    -webkit-animation-name:fade-in;
+    animation-name:fade-in;
   }
   
   @keyframes fadeIn {
@@ -16,16 +16,16 @@
     }
   }
   
-  .fadeInDown {
+  .fade-in-down {
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    -webkit-animation-name: fadeInDown;
-    animation-name: fadeInDown;
+    -webkit-animation-name: fade-in-down;
+    animation-name: fade-in-down;
   }
   
-  @keyframes fadeInDown {
+  @keyframes fade-in-down {
     from {
       opacity: 0;
       -webkit-transform: translate3d(0, -100%, 0);
@@ -38,16 +38,16 @@
     }
   }
   
-  .fadeInUp {
+  .fade-in-up {
     -webkit-animation-duration: 2ss;
     animation-duration: 2s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    -webkit-animation-name: fadeInup;
-    animation-name: fadeInUp;
+    -webkit-animation-name: fade-in-up;
+    animation-name: fade-in-up;
   }
   
-  @keyframes fadeInUp {
+  @keyframes fade-in-up {
     from {
       opacity: 0;
       -webkit-transform: translate3d(0, 100%, 0);
@@ -60,16 +60,16 @@
     }
   }
   
-  .fadeInLeft {
+  .fade-in-left {
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    -webkit-animation-name: fadeInLetft;
-    animation-name: fadeInLeft;
+    -webkit-animation-name: fade-in-left;
+    animation-name: fade-in-left;
   }
   
-  @keyframes fadeInLeft {
+  @keyframes fade-in-left {
     from {
       opacity: 0;
       -webkit-transform: translate3d(-100%, 0, 0);
@@ -82,16 +82,16 @@
     }
   }
   
-  .fadeInRight {
+  .fade-in-right {
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    -webkit-animation-name: fadeInRigth;
-    animation-name: fadeInRight;
+    -webkit-animation-name: fade-in-rigth;
+    animation-name: fade-in-right;
   }
   
-  @keyframes fadeInRight {
+  @keyframes fade-in-right {
     from {
       opacity: 0;
       -webkit-transform: translate3d(100%, 0, 0);
