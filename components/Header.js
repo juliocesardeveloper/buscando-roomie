@@ -6,7 +6,7 @@ function Header () {
       <div className={`${['fade-in-down header']}`}>
         <div className={`${style['header-bar']}`}>
           <div className={`${style['header-bar-img-logo']}`}></div>
-          <label className={`${style['fa-bars']}`} id={`${style['slide-nav-button']}`} htmlFor="menu"><span><img src="./menu.svg" alt="menu" /></span></label>
+          <label className={`${style['fa-bars']}`} id={`${style['slide-nav-button']}`} htmlFor="menu"><span><img src="/menu.svg" alt="menu" /></span></label>
         </div>
         <nav id={`${style['slide-menu']}`} className={`${style['slide-menu-nav']}`}>
           <input type="checkbox" id="menu" className={`${style['font-menu']}`} />
