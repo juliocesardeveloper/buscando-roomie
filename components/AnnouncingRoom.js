@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { loginRequest } from "../actions/index";
 import { useState } from "react";
 
-function Login({ handleClose, show, modal }) {
+function AnnouncingRoom({ handleClose, show, modal }) {
   const showHideClassName = show ? style.principalContainer : style.displayNone;
 
   const [form, setValues] = useState({
@@ -71,4 +71,4 @@ const mapDispatchToProps = {
   loginRequest,
 };
 
-export default connect(null, mapDispatchToProps)(Login);
+export default connect(null, mapDispatchToProps)(AnnouncingRoom);
