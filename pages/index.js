@@ -6,10 +6,9 @@ import Header from '../components/Header'
 import Search from '../components/Search'
 import Hero from '../components/Hero'
 import Card from '../components/Card'
+import Footer from '../components/Footer'
 
 import { useState, useEffect } from 'react'
-
-// import Footer from '../components/Footer'
 
 export default function Home () {
 
@@ -75,7 +74,7 @@ export default function Home () {
         </section>
       </main>
     </div>
-    {/* <Footer /> */}
+    <Footer/>
     </>
   )
 }
