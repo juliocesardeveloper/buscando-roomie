@@ -5,10 +5,10 @@ import Header from "../components/Header";
 import Search from "../components/Search";
 import Hero from "../components/Hero";
 import Card from "../components/Card";
+import Footer from "../components/Footer";
+// import AnnouncingRoom from "../components/AnnouncingRoom";
 
 import { useState, useEffect } from "react";
-
-// import Footer from '../components/Footer'
 
 export default function Home() {
   const [room, setRoom] = useState([]);
@@ -57,6 +57,13 @@ export default function Home() {
           handleClose={hideLoginModal}
           modal={(arg) => showModal(arg)}
         />
+
+        {/* <AnnouncingRoom
+          show={login}
+          handleClose={hideLoginModal}
+          modal={(arg) => showModal(arg)}
+        /> */}
+
         <Register
           show={register}
           handleClose={hideRegisterModal}
@@ -75,10 +82,17 @@ export default function Home() {
             {room.data?.map((item) => (
               <Card key={item.id} {...item} />
             ))}
+            <Card
+              images={
+                "https://cf.bstatic.com/images/hotel/max1024x768/213/213503501.jpg"
+              }
+              price={"100.000"}
+              location={"Medellín"}
+            />
           </section>
         </main>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

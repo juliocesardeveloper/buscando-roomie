@@ -1,0 +1,76 @@
+.principalContainer {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: grid;
+  background-color: lighten($color: grey, $amount: 30);
+  place-items: center;
+  .container {
+    width: 800px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f6f8ff;
+    margin: 1% auto;
+    border-radius: 6px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    div {
+      height: 84%;
+      width: 80%;
+      margin: 7% 10%;
+      display: grid;
+      grid-template-rows: 4% 20% 65% 16%;
+      justify-items: center;
+      span {
+        font-size: 18px;
+        font-weight: 700;
+        justify-self: flex-end;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      h2 {
+        justify-self: start;
+      }
+      form {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-rows: auto;
+        justify-items: center;
+        align-content: space-around;
+      }
+      p {
+        align-self: end;
+        span {
+          color: blue;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.container form {
+  input {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 4px;
+    &:nth-child(3) {
+      width: 150px;
+      background-color: #23ce6b;
+      align-self: end;
+      cursor: pointer;
+    }
+  }
+}
+
+.displayNone {
+  display: none;
+}

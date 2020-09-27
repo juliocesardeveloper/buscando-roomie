@@ -1,0 +1,49 @@
+.slider{
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slide{
+  min-width: 100%;
+  height: 100%;
+  transition: .5s;
+}
+%btn-styles{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5%;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  transition: .5s;
+  &:hover{
+    background: rgba(0, 0, 0, 0.356);
+    cursor: pointer;
+    span{
+      img{
+        filter:invert(100%);
+      }
+    }
+  }
+}
+
+#goLeft{
+  left: 0;
+  @extend %btn-styles;
+}
+
+#goRigth{
+  right: 0;
+  @extend %btn-styles;
+}
+
+.image{
+  width: 100%;
+  height: 100%;
+}
