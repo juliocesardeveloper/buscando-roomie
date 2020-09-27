@@ -1,10 +1,10 @@
-import style from "../styles/Components/Login.module.scss";
+import style from "../styles/Components/AnnouncingRoom.module.scss";
 import Link from "next/link";
 import { connect } from "react-redux";
 import { loginRequest } from "../actions/index";
 import { useState } from "react";
 
-function Login({ handleClose, show, modal }) {
+function AnnouncingRoom({ handleClose, show, modal }) {
   const showHideClassName = show ? style.principalContainer : style.displayNone;
 
   const [form, setValues] = useState({
@@ -24,16 +24,12 @@ function Login({ handleClose, show, modal }) {
     props.history.push("/");
   };
 
-  const handleRegister = () => {
-    modal(1);
-  };
-
   return (
     <div className={showHideClassName}>
       <article className={style.container}>
         <div>
           <span onClick={handleClose}>X</span>
-          <h2>Iniciar sesión</h2>
+          <h2>Anuncia un cuarto</h2>
           <form onSubmit={handleSubmit}>
             <input
               type="text"
@@ -55,12 +51,8 @@ function Login({ handleClose, show, modal }) {
               title="Usa una contraseña con más de 6 caracteres"
               onChange={handleInput}
             />
-            <input type="submit" value="Ingresar" />
+            <input type="submit" value="Publicar" />
           </form>
-          <p>
-            ¿No tienes una cuenta?{" "}
-            <span onClick={handleRegister}>Regístrate</span>
-          </p>
         </div>
       </article>
     </div>
@@ -71,4 +63,4 @@ const mapDispatchToProps = {
   loginRequest,
 };
 
-export default connect(null, mapDispatchToProps)(Login);
+export default connect(null, mapDispatchToProps)(AnnouncingRoom);
