@@ -44,7 +44,7 @@ export default function Home () {
   const hideRegisterModal = () => {
     setRegister((register = false))
   }
-
+  
   return (
     <>
     <Header />
@@ -67,6 +67,11 @@ export default function Home () {
           { room.data?.map(item => (
             <Card key={item.id}{...item} />
           ))}
+          <Card
+            images={'https://cf.bstatic.com/images/hotel/max1024x768/213/213503501.jpg'} 
+            price={'100.000'}
+            location={'Medellín'}
+          />
         </section>
       </main>
     </div>
