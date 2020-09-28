@@ -6,7 +6,7 @@ import Search from "../components/Search";
 import Hero from "../components/Hero";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
-// import AnnouncingRoom from "../components/AnnouncingRoom";
+import AnnouncingRoom from "../components/AnnouncingRoom";
 
 import { useState, useEffect } from "react";
 
