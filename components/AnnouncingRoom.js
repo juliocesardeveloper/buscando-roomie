@@ -31,7 +31,52 @@ function AnnouncingRoom({ handleClose, show, modal }) {
           <span onClick={handleClose}>X</span>
           <h2>Anuncia un cuarto</h2>
           <form onSubmit={handleSubmit}>
-            <input
+            <section>
+              <div>
+                <h3>Agrega fotos del cuarto</h3>
+                <h6>(mínimo 2 - máximo 8)</h6>
+              </div>
+              <div>
+                <h3>Agrega una foto tuya</h3>
+              </div>
+            </section>
+            <section>
+              <article>
+                <input
+                  type="number"
+                  placeholder="Precio de la habitación (USD)"
+                  required
+                />
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Descripción de la habitación"
+                ></textarea>
+              </article>
+              <article>
+                <input type="text" placeholder="Ubicación" required />
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Descripción del sector"
+                ></textarea>
+              </article>
+              <article>
+                <input type="text" placeholder="Características" required />
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Acerca de ti"
+                ></textarea>
+              </article>
+            </section>
+            {/* <input
               type="text"
               id="email"
               name="email"
@@ -40,17 +85,7 @@ function AnnouncingRoom({ handleClose, show, modal }) {
               title="Usa una cuenta de correo válida"
               required
               onChange={handleInput}
-            />
-            <input
-              type="password"
-              id="pwd"
-              name="pwd"
-              placeholder="Contraseña"
-              required
-              pattern="^\w{6,10}$"
-              title="Usa una contraseña con más de 6 caracteres"
-              onChange={handleInput}
-            />
+            /> */}
             <input type="submit" value="Publicar" />
           </form>
         </div>
