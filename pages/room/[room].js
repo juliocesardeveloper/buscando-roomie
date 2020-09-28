@@ -1,10 +1,8 @@
-import Header from '../../components/Header'
+import Layout from '../../components/Layout'
 import Carousel from '../../components/Carousel'
 import { useRouter } from 'next/router'
 import styles from '../../styles/Components/Room.module.scss'
 import { useState, useEffect } from 'react'
-import Login from '../../components/Login'
-import Register from '../../components/Register'
 
 const price = '100.000'
 const city = 'Medellín'
@@ -16,75 +14,37 @@ const photoHost = 'https://www.eyescreamproductions.com/allaccess/wp-content/upl
 const Room = () => {
   const router = useRouter()
   const { room } = router.query
-  const [dato, setDato] = useState(0)
-  let [login, setLogin] = useState(false)
-  let [register, setRegister] = useState(false)
-
-  useEffect(() => {
-    console.log(dato)
-    if (dato == 1) {
-      setRegister((register = true))
-      setLogin((login = false))
-    } else if (dato == 2) {
-      setLogin((login = true))
-      setRegister((register = false))
-    }
-  })
-
-  function showModal(arg) {
-    setDato(arg);
-  }
-
-  const hideLoginModal = () => {
-    setLogin(false);
-    setDato(0);
-  };
-
-  const hideRegisterModal = () => {
-    setRegister(false);
-    setDato(0);
-  };
-
   return (
     <>
-      <Header modal={(arg) => showModal(arg)} />
-      <Login
-          show={login}
-          handleClose={hideLoginModal}
-          modal={(arg) => showModal(arg)}
-        />
-      <Register
-          show={register}
-          handleClose={hideRegisterModal}
-          modal={(arg) => showModal(arg)}
-        />
-      <Carousel />
-      <section className={styles.containerDetails}>
-        <article className={styles.infoRoom}>
-          <h2>${price}COP / en {city}</h2>
-          <h2>Sobre la habitación</h2>
-          <p>{aboutRoom}</p>
-          <h2>Servicios</h2>
-          <ul>
-            {services.map((item, index) => (
-              <li key={index}>{ item }</li>
-            ))}
-          </ul>
-          <h2>Sobre la ubicación</h2>
-          <p>{aboutRoom}</p>
-        </article>
-        <article className={styles.infoHost}>
-          <h2>Sobre {hostName}</h2>
-          <img className={styles.photoHost} src={photoHost} alt="Photo host"/>
-          <p>{aboutRoom}</p>
-          <small>Te gustó la habitación?</small>
-          <small>Comunicate con {hostName}</small>
-          <article>
-            <a href="/"><img src="/whatsapp.svg" alt=""/></a>
-            <a href="/"><img src="/email.svg" alt=""/></a>
+      <Layout>
+        <Carousel />
+        <section className={styles.containerDetails}>
+          <article className={styles.infoRoom}>
+            <h2>${price}COP / en {city}</h2>
+            <h2>Sobre la habitación</h2>
+            <p>{aboutRoom}</p>
+            <h2>Servicios</h2>
+            <ul>
+              {services.map((item, index) => (
+                <li key={index}>{ item }</li>
+              ))}
+            </ul>
+            <h2>Sobre la ubicación</h2>
+            <p>{aboutRoom}</p>
           </article>
-        </article>
-      </section>
+          <article className={styles.infoHost}>
+            <h2>Sobre {hostName}</h2>
+            <img className={styles.photoHost} src={photoHost} alt="Photo host"/>
+            <p>{aboutRoom}</p>
+            <small>Te gustó la habitación?</small>
+            <small>Comunicate con {hostName}</small>
+            <article>
+              <a href="/"><img src="/whatsapp.svg" alt=""/></a>
+              <a href="/"><img src="/email.svg" alt=""/></a>
+            </article>
+          </article>
+        </section>
+      </Layout>
     </>
   )
 }

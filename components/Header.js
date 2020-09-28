@@ -2,19 +2,15 @@ import style from "../styles/Components/Header.module.scss";
 
 const Header = (props) => {
 
-  console.log(props);
-
   const { modal } = props
 
-  console.log(modal);
-
   const handleRegister = () => {
-    modal(1);
-  };
+    modal(1)
+  }
 
   const handleLogin = () => {
-    modal(2);
-  };
+    modal(2)
+  }
 
   return (
     <>
@@ -54,7 +50,7 @@ const Header = (props) => {
         </nav>
       </div>
     </>
-  );
+  )
 }
 
-export default Header;
+export default Header
