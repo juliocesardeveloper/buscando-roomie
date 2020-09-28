@@ -2,19 +2,62 @@ import Header from '../../components/Header'
 import Carousel from '../../components/Carousel'
 import { useRouter } from 'next/router'
 import styles from '../../styles/Components/Room.module.scss'
+import { useState, useEffect } from 'react'
+import Login from '../../components/Login'
+import Register from '../../components/Register'
+
 const price = '100.000'
 const city = 'Medellín'
 const aboutRoom = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae blandit dignissim nullam quis lorem duis sollicitudin. Proin eget ipsum facilisi justo, pharetra, porttitor. Semper nunc id mi etiam scelerisque dolor proin aliquam. Et vulputate commodo sit enim amet gravida.'
 const services = ['Servicio 1', 'Servicio 2', 'Servicio 3', 'Servicio 4']
 const hostName = '{host}'
 const photoHost = 'https://www.eyescreamproductions.com/allaccess/wp-content/uploads/2012/11/2011DaveGrohlNMEAwardsDC200112.jpg'
+
 const Room = () => {
   const router = useRouter()
   const { room } = router.query
+  const [dato, setDato] = useState(0)
+  let [login, setLogin] = useState(false)
+  let [register, setRegister] = useState(false)
+
+  useEffect(() => {
+    console.log(dato)
+    if (dato == 1) {
+      setRegister((register = true))
+      setLogin((login = false))
+    } else if (dato == 2) {
+      setLogin((login = true))
+      setRegister((register = false))
+    }
+  })
+
+  function showModal(arg) {
+    setDato(arg);
+  }
+
+  const hideLoginModal = () => {
+    setLogin(false);
+    setDato(0);
+  };
+
+  const hideRegisterModal = () => {
+    setRegister(false);
+    setDato(0);
+  };
 
   return (
     <>
-      <Header />
+      <Header modal={(arg) => showModal(arg)} />
+      <Login
+          show={login}
+          handleClose={hideLoginModal}
+          modal={(arg) => showModal(arg)}
+        />
+      <Register
+          show={register}
+          handleClose={hideRegisterModal}
+          modal={(arg) => showModal(arg)}
+        />
       <Carousel />
       <section className={styles.containerDetails}>
         <article className={styles.infoRoom}>

@@ -1,7 +1,12 @@
 import style from "../styles/Components/Header.module.scss";
 
-function Header(props) {
-  const { modal } = props;
+const Header = (props) => {
+
+  console.log(props);
+
+  const { modal } = props
+
+  console.log(modal);
 
   const handleRegister = () => {
     modal(1);
