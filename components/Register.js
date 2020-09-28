@@ -1,11 +1,10 @@
-
-import style from "../styles/Register.module.scss";
+import style from "../styles/Components/Register.module.scss";
 import Link from "next/link";
 import { connect } from "react-redux";
 import { registerRequest } from "../actions/index";
 import { useState } from "react";
 
-function Register({ handleClose, show, props }) {
+function Register({ handleClose, show, modal }) {
   const showHideClassName = show ? style.principalContainer : style.displayNone;
 
   const [form, setValues] = useState({
@@ -30,6 +29,11 @@ function Register({ handleClose, show, props }) {
     props.loginRequest(form);
     props.history.push("/");
   };
+
+  const handleLogin = () => {
+    modal(2);
+  };
+
   return (
     <div className={showHideClassName}>
       <article className={style.container}>
@@ -107,12 +111,13 @@ function Register({ handleClose, show, props }) {
             <input type="submit" value="Ingresar" className="register-btn" />
           </form>
           <p>
-            ¿Ya tienes una cuenta? <Link href="/">Inicia sesión</Link>
+            ¿Ya tienes una cuenta?{" "}
+            <span onClick={handleLogin}>Inicia sesión</span>
           </p>
         </div>
       </article>
     </div>
-  )
+  );
 }
 
 const mapDispatchToProps = {
