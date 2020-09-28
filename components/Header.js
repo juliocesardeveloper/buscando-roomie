@@ -1,15 +1,16 @@
 import style from "../styles/Components/Header.module.scss";
 
-function Header(props) {
-  const { modal } = props;
+const Header = (props) => {
+
+  const { modal } = props
 
   const handleRegister = () => {
-    modal(1);
-  };
+    modal(1)
+  }
 
   const handleLogin = () => {
-    modal(2);
-  };
+    modal(2)
+  }
 
   return (
     <>
@@ -49,7 +50,7 @@ function Header(props) {
         </nav>
       </div>
     </>
-  );
+  )
 }
 
-export default Header;
+export default Header
