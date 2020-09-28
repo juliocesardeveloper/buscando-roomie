@@ -2,13 +2,17 @@
 @import '../variables.scss';
 
 .header{
-  width: minmax(350px, maxcontent );
-  height: minmax(70px, maxcontent);
-  background-color: #99AFFF;
+  z-index: 1000;
+  min-width: 100%;
+  background: linear-gradient($Primary-Lightest, $color-Card);
   border-radius: $border-value;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: $value-shadow-box;
+  position: fixed;
+  top: 0;
+  
 }
 
 .header-bar{
@@ -65,14 +69,14 @@
   border-radius: $border-value;
   color:$color-Black;
   padding: $space-micro;
-  border-bottom:  1px solid none;
-  transition: color 1.5s, box-shadow 1s,border-bottom 2s;
+  border:  0.5px solid none;
+  transition: color 1s, box-shadow 1s,border-bottom 1s;
 }
 
 .nav-list-item:hover{
   
   border-bottom:  1px solid none ;
-  box-shadow: $value-shadow-box;
+  box-shadow:$value-shadow-box-blue;
 }
 
 
@@ -80,8 +84,9 @@
   .header{
     flex-direction: row;
     align-items: center;
-    max-height: 70px;
+    max-height: $space-large;
     border-radius: 0px;
+    min-width: 100%;
   }
 
   .header-bar-img-logo{
