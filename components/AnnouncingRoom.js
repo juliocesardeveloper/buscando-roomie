@@ -1,28 +1,27 @@
-import style from "../styles/Components/AnnouncingRoom.module.scss";
-import Link from "next/link";
-import { connect } from "react-redux";
-import { loginRequest } from "../actions/index";
-import { useState } from "react";
+import style from '../styles/Components/AnnouncingRoom.module.scss'
+import { connect } from 'react-redux'
+import { loginRequest } from '../actions/index'
+import { useState } from 'react'
 
-function AnnouncingRoom({ handleClose, show, modal }) {
-  const showHideClassName = show ? style.principalContainer : style.displayNone;
+function AnnouncingRoom ({ handleClose, show, modal, props }) {
+  const showHideClassName = show ? style.principalContainer : style.displayNone
 
   const [form, setValues] = useState({
-    email: "",
-  });
+    email: ''
+  })
 
   const handleInput = (event) => {
     setValues({
       ...form,
-      [event.target.name]: event.target.value,
-    });
-  };
+      [event.target.name]: event.target.value
+    })
+  }
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    props.loginRequest(form);
-    props.history.push("/");
-  };
+    event.preventDefault()
+    props.loginRequest(form)
+    props.history.push('/')
+  }
 
   return (
     <div className={showHideClassName}>
@@ -46,6 +45,7 @@ function AnnouncingRoom({ handleClose, show, modal }) {
                   type="number"
                   placeholder="Precio de la habitación (USD)"
                   required
+                  onChange={handleInput}
                 />
                 <textarea
                   name=""
@@ -53,49 +53,42 @@ function AnnouncingRoom({ handleClose, show, modal }) {
                   cols="30"
                   rows="10"
                   placeholder="Descripción de la habitación"
+                  onChange={handleInput}
                 ></textarea>
               </article>
               <article>
-                <input type="text" placeholder="Ubicación" required />
+                <input type="text" placeholder="Ubicación" required onChange={handleInput}/>
                 <textarea
                   name=""
                   id=""
                   cols="30"
                   rows="10"
                   placeholder="Descripción del sector"
+                  onChange={handleInput}
                 ></textarea>
               </article>
               <article>
-                <input type="text" placeholder="Características" required />
+                <input type="text" placeholder="Características" required onChange={handleInput}/>
                 <textarea
                   name=""
                   id=""
                   cols="30"
                   rows="10"
                   placeholder="Acerca de ti"
+                  onChange={handleInput}
                 ></textarea>
               </article>
             </section>
-            {/* <input
-              type="text"
-              id="email"
-              name="email"
-              placeholder="Correo"
-              pattern="^[\w\._]{2,30}\+?[\w]{0,10}@[\w\.\-]{3,15}\.\w{2,7}$"
-              title="Usa una cuenta de correo válida"
-              required
-              onChange={handleInput}
-            /> */}
-            <input type="submit" value="Publicar" />
+            <input type="submit" value="Publicar"/>
           </form>
         </div>
       </article>
     </div>
-  );
+  )
 }
 
 const mapDispatchToProps = {
-  loginRequest,
-};
+  loginRequest
+}
 
 export default connect(null, mapDispatchToProps)(AnnouncingRoom);
