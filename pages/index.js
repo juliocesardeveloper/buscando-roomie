@@ -1,18 +1,14 @@
-import styles from "../styles/Components/Home.module.scss";
-import Login from "../components/Login";
-import Register from "../components/Register";
-import Header from "../components/Header";
-import Search from "../components/Search";
-import Hero from "../components/Hero";
-import Card from "../components/Card";
-import Footer from "../components/Footer";
-// import AnnouncingRoom from "../components/AnnouncingRoom";
+import styles from '../styles/Components/Home.module.scss'
+import Layout from '../components/Layout'
+import Search from '../components/Search'
+import Hero from '../components/Hero'
+import Card from '../components/Card'
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
 
 export default function Home() {
-  const [room, setRoom] = useState([]);
-  const [dato, setDato] = useState(0);
+  
+  const [room, setRoom] = useState([])
 
   // useEffect(() => {
   //   fetch("http://localhost:8080/api/rooms")
@@ -20,57 +16,10 @@ export default function Home() {
   //     .then((data) => setRoom(data));
   // }, []);
 
-  let [login, setLogin] = useState(false);
-  let [register, setRegister] = useState(false);
-
-  useEffect(() => {
-    console.log(dato);
-    if (dato == 1) {
-      setRegister((register = true));
-      setLogin((login = false));
-    } else if (dato == 2) {
-      setLogin((login = true));
-      setRegister((register = false));
-    }
-  });
-
-  function showModal(arg) {
-    setDato(arg);
-  }
-
-  const hideLoginModal = () => {
-    setLogin(false);
-    setDato(0);
-  };
-
-  const hideRegisterModal = () => {
-    setRegister(false);
-    setDato(0);
-  };
-
   return (
     <>
-      <Header modal={(arg) => showModal(arg)} />
-      <div className={styles.container}>
-        <Login
-          show={login}
-          handleClose={hideLoginModal}
-          modal={(arg) => showModal(arg)}
-        />
-
-        {/* <AnnouncingRoom
-          show={login}
-          handleClose={hideLoginModal}
-          modal={(arg) => showModal(arg)}
-        /> */}
-
-        <Register
-          show={register}
-          handleClose={hideRegisterModal}
-          modal={(arg) => showModal(arg)}
-        />
-
-        <Search />
+      <Layout>
+      <Search />
         <Hero
           heroImage={
             "https://i.picsum.photos/id/943/600/500.jpg?hmac=FDXOi156vidMKBiwEiT5-oVIpP7X4dXd54S1-1xDQRM"
@@ -91,8 +40,8 @@ export default function Home() {
             />
           </section>
         </main>
-      </div>
-      <Footer />
+
+      </Layout>
     </>
   );
 }

@@ -5,32 +5,31 @@
 /* here we define the variables that will be used */
 
 /* imports fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&family=Roboto:ital,wght@0,400;1,300;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&family=Roboto:ital,wght@0,400;1,300;1,500&display=swap");
 
 /*branding Colors  */
-$Primary-Lightest:#92FFEB;
-$Primary-Lightest-Gray:#9EA5A5;
-$Primary-Lighter:#D8FCFF;
-$Primary-Lighter-Gray:#4B5252;
-$Primary-Light:#A8FFFF;
-$Primary-Light-Gray:#737A7A;
-$Primary:#F6F8FF;
-$Primary-Gray:#272D2D;
-$Primary-green:#23CE6B;
-$Primary-Dark:#CAD2D2;
-$color-Background-Container: #FEF6E4;
-$color-Background-Section: #FFFFFE;
-$color-Warning-Primary: #F582AE;
+$Primary-Lightest: #92ffeb;
+$Primary-Lightest-Gray: #9ea5a5;
+$Primary-Lighter: #d8fcff;
+$Primary-Lighter-Gray: #4b5252;
+$Primary-Light: #a8ffff;
+$Primary-Light-Gray: #737a7a;
+$Primary: #f6f8ff;
+$Primary-Gray: #272d2d;
+$Primary-green: #b7ffae;
+$Primary-Dark: #cad2d2;
+$color-Background-Container: #fef6e4;
+$color-Background-Section: #fffffe;
+$color-Warning-Primary: #f582ae;
 $color-Warning-Yellow: #f0e26e;
 $color-warning-Green: #98ee98;
-$color-Black:#000;
-$color-Border-Card:#50514F;
-$color-Card: #99AFFF;
-
+$color-Black: #000;
+$color-Border-Card: #50514f;
+$color-Card: #99afff;
 
 /*-----FONTS-----*/
 
-$font-Family-Kumbh:'Kumbh Sans', sans-serif;
+$font-Family-Kumbh: "Kumbh Sans", sans-serif;
 $font-Family-Roboto: "Roboto", sans-serif;
 
 @mixin paragraph {
@@ -68,7 +67,6 @@ $font-Family-Roboto: "Roboto", sans-serif;
 //   }
 // }
 
-
 /*---- SPACING ---*/
 $space-nano: 8px;
 $space-micro: 10px;
@@ -77,9 +75,7 @@ $space-medium: 40px;
 $space-large: 80px;
 $space-extraLarge: 170px;
 
-
 /*---- EFFECTS ---*/
 
 $value-shadow-box: 0px 4px 4px rgba(0, 0, 0, 0.5);
-$border-value:10px;
-
+$border-value: 10px;

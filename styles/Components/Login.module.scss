@@ -1,19 +1,20 @@
 .principalContainer {
   width: 100vw;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   display: grid;
   background-color: lighten($color: grey, $amount: 30);
   place-items: center;
+  z-index: 9999;
   .container {
     width: 400px;
-    height: 435px;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #f6f8ff;
-    margin: 8% auto;
+    margin: auto;
     border-radius: 6px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
     div {
