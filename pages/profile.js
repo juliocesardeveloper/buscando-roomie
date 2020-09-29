@@ -22,9 +22,24 @@ const Profile = () => {
           </div>
         </div>
         <form className={styles.Info} action="">
-          <input type="text" placeholder="¿Cómo te describes?" />
-          <input type="text" placeholder="¿Que buscas?" />
-          <input type="text" placeholder="Cosas que te gustan" />
+          <div className={styles.boxInfo}>
+            <span>
+              ¿Cómo te describes?
+            </span>
+            <input type="text" />
+          </div>
+          <div className={styles.boxInfo}>
+            <span>
+              ¿Que buscas?
+            </span>
+            <input type="text" />
+          </div>
+          <div className={styles.boxInfo}>
+            <span>
+              Cosas que te gustan
+            </span>
+            <input type="text" />
+          </div>
         </form>
       </section>
       <Footer />

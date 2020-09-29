@@ -68,6 +68,21 @@
   grid-template-columns: 500px 500px;
   grid-template-rows: 1fr 1fr;
   justify-content: center;
+  margin-top: 30px;
+  input {
+    height: 100px;
+    border: 1px solid $Primary-Gray;
+    border-radius: 10px;
+    text-align: initial;
+  }
+}
+.boxInfo {
+  display: flex;
+  flex-direction: column;
+  span {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
 }
 
 .Uno{
