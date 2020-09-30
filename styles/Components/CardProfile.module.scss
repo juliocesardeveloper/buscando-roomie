@@ -1,0 +1,72 @@
+@import "../variables.scss";
+
+.Card{
+    border: 1px solid $Primary-Gray;
+    border-radius: 10px;
+    cursor: pointer;
+    display: grid;
+    grid-template-rows: 80px 1fr;
+    height: 250px;
+    justify-content: center;
+    margin-left: 100px;
+    width: 250px;
+}
+.Super{
+    background-color: $color-Card;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    width: 248px;
+}
+
+.Perfil{
+    background-color:$Primary-Gray;
+    border-radius: 10px;
+    height: 100px;
+    margin-top: 30px;
+    width: 100px;
+}
+
+.Text{
+    color: $Primary-Gray;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.Infe{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.Buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  button {
+    border: none;
+    border-bottom:  1px solid none;
+    border-radius: $border-value;
+    color: $Primary-Gray;
+    cursor: pointer;
+    font-family: $font-Family-Kumbh;
+    height: 40px;
+    outline: none;
+    margin: 0 10px;
+    padding: $space-micro;
+    transition: color 0.7s, box-shadow 0.7s,border-bottom 1s;
+    width: 100px;
+  }
+  button:hover {
+    border-bottom:  1px solid none ;
+    box-shadow: $value-shadow-box;
+  }
+}
+
+.like {
+  background-color: $Primary-green;
+}
+
+.noLike {
+  background-color: $color-Warning-Primary;
+}

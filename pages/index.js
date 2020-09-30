@@ -4,10 +4,6 @@ import Search from '../components/Search'
 import Hero from '../components/Hero'
 import Card from '../components/Card'
 
-// import { useForm } from '../hooks/useForm'
-// import styles from '../styles/Components/Search.module.scss'
-// import Router, { useRouter } from 'next/router'
-
 import { useState, useEffect } from 'react'
 
 export default function Home () {
@@ -18,30 +14,6 @@ export default function Home () {
       .then((response) => response.json())
       .then((data) => setRoom(data))
   }, [])
-
-  // const router = useRouter()
-  // const { q = '' } = router.query
-  // console.log(q)
-  // const [formValues, handleInputChange] = useForm({
-  //   searchText: q
-  // })
-
-  // const { searchText } = formValues
-
-  // const getRoomsByLocation = (location = '') => {
-  //   if (location === '') {
-  //     return []
-  //   }
-  //   location = location.toLocaleLowerCase()
-  //   return room.filter(rooms => rooms.location.toLocaleLowerCase().includes(location))
-  // }
-
-  // const roomsFiltered = useMemo(() => getRoomsByLocation(q), [q])
-
-  // const handleSearch = (e) => {
-  //   e.preventDefault()
-  //   Router.push(`?q=${searchText}`)
-  // }
 
   return (
     <>
@@ -61,14 +33,6 @@ export default function Home () {
               ))
             }
 
-            {/* {
-              roomsFiltered.map(room => (
-                <Card
-                  key={ room.id }
-                  { ...room }
-                />
-              ))
-            } */}
             {/* <Card
               images={
                 "https://cf.bstatic.com/images/hotel/max1024x768/213/213503501.jpg"

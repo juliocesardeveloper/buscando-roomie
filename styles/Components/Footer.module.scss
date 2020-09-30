@@ -1,47 +1,47 @@
-@import "https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap";
-
+@import "../variables.scss";
 
 .footer {
-  background-color: #99AFFF;
+  align-items: center;
+  background-color: $color-Card;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-Family-Kumbh;
+  justify-content: space-around;
   min-height: 70px;
   width: minmax(360px, maxcontent);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
 }
 .brand {
-  width: 37.6px;
   height: 37.6px;
   margin: 2px 10px;
+  width: 37.6px;
 }
 .logos-container {
   display: flex;
-  font-family: 'Kumbh', Sans;
+  font-family: $font-Family-Kumbh;
 }
 .logos {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 .logo-description {
-  margin: 0 10px;
-  font-size: 10px;
   cursor: pointer;
+  font-size: 10px;
+  margin: 0 10px;
   &:hover {
     color: white;
   }
 }
 .footer-contacto {
+  align-items: center;
+  background-color: $Primary-Gray;
+  color: $color-Card;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  font-family: 'kumbh', Sans;
+  font-family: $font-Family-Kumbh;
   font-size: 12px;
-  background-color: black;
-  color: #99afff;
+  justify-content: space-evenly;
   min-width: -moz-available;
   min-width: -webkit-fill-available;
 }
@@ -51,11 +51,11 @@
     justify-content: space-evenly;
   }
   .footer-contacto {
-    height: auto;
-    background-color: inherit;
-    color: black;
-    min-width: max-content;
     align-items: center;
+    background-color: inherit;
+    color: $Primary-Gray;
+    height: auto;
+    min-width: max-content;
     >h4 {
       align-self: center;
       margin: 5px 0px;
