@@ -7,7 +7,7 @@ import Card from '../components/Card'
 import { useState, useEffect } from "react"
 
 export default function Home() {
-  
+
   const [room, setRoom] = useState([])
 
   // useEffect(() => {
@@ -26,10 +26,11 @@ export default function Home() {
           }
         />
         <main>
+
           <h1 className={styles.title}>Habitaciones disponibles</h1>
           <section className={styles.main}>
             {room.data?.map((item) => (
-              <Card key={item.id} {...item} />
+            <Card key={item.id} {...item} />
             ))}
             <Card
               images={
