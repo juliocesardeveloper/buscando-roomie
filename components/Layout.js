@@ -8,7 +8,6 @@ import AnnouncingRoom from '../components/AnnouncingRoom'
 import { useState, useEffect } from 'react'
 
 export default function Layout(props) {
-
   const { children } = props
 
   const [room, setRoom] = useState([])
@@ -24,16 +23,16 @@ export default function Layout(props) {
   let [register, setRegister] = useState(false)
 
   useEffect(() => {
-    if (dato == 1) {
+    if (dato === 1) {
       setRegister((register = true))
       setLogin((login = false))
-    } else if (dato == 2) {
+    } else if (dato === 2) {
       setLogin((login = true))
       setRegister((register = false))
     }
   })
 
-  function showModal(arg) {
+  function showModal (arg) {
     setDato(arg)
   }
 
@@ -43,8 +42,8 @@ export default function Layout(props) {
   }
 
   const hideRegisterModal = () => {
-    setRegister(false);
-    setDato(0);
+    setRegister(false)
+    setDato(0)
   }
 
   return (
@@ -72,7 +71,5 @@ export default function Layout(props) {
       </div>
       <Footer />
     </>
-  );
+  )
 }
-
-

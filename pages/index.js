@@ -6,7 +6,7 @@ import Card from '../components/Card'
 
 import { useState, useEffect } from 'react'
 
-export default function Home () {
+export default function Home() {
   const [room, setRoom] = useState([])
 
   useEffect(() => {
