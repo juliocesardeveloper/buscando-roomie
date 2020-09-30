@@ -1,32 +1,34 @@
-import style from "../styles/Components/Login.module.scss";
-import Link from "next/link";
-import { connect } from "react-redux";
-import { loginRequest } from "../actions/index";
-import { useState } from "react";
+import style from "../styles/Components/Login.module.scss"
+import PropTypes from 'prop-types'
+import { connect } from "react-redux"
+import { loginUser } from "../actions/index"
+import { useState } from "react"
 
 function Login({ handleClose, show, modal }) {
   const showHideClassName = show ? style.principalContainer : style.displayNone;
 
   const [form, setValues] = useState({
-    email: "",
-  });
+    email: '',
+    id: '',
+    name: ''
+  })
 
-  const handleInput = (event) => {
+  const updateInput = (event) => {
     setValues({
       ...form,
-      [event.target.name]: event.target.value,
-    });
-  };
+      [event.target.name]: event.target.value
+    })
+  }
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    props.loginRequest(form);
-    props.history.push("/");
-  };
+    event.preventDefault()
+    props.loginUser(form, '/')
+  }
+  
 
   const handleRegister = () => {
-    modal(1);
-  };
+    modal(1)
+  }
 
   return (
     <div className={showHideClassName}>
@@ -43,7 +45,7 @@ function Login({ handleClose, show, modal }) {
               pattern="^[\w\._]{2,30}\+?[\w]{0,10}@[\w\.\-]{3,15}\.\w{2,7}$"
               title="Usa una cuenta de correo válida"
               required
-              onChange={handleInput}
+              onChange={updateInput}
             />
             <input
               type="password"
@@ -53,12 +55,12 @@ function Login({ handleClose, show, modal }) {
               required
               pattern="^\w{6,10}$"
               title="Usa una contraseña con más de 6 caracteres"
-              onChange={handleInput}
+              onChange={updateInput}
             />
             <input type="submit" value="Ingresar" />
           </form>
           <p>
-            ¿No tienes una cuenta?{" "}
+            ¿No tienes una cuenta?
             <span onClick={handleRegister}>Regístrate</span>
           </p>
         </div>
@@ -68,7 +70,11 @@ function Login({ handleClose, show, modal }) {
 }
 
 const mapDispatchToProps = {
-  loginRequest,
-};
+  loginUser
+}
 
-export default connect(null, mapDispatchToProps)(Login);
+Login.propTypes = {
+  loginUser: PropTypes.func
+}
+
+export default connect(null, mapDispatchToProps)(Login)
