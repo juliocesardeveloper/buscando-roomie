@@ -4,25 +4,24 @@ import Search from '../components/Search'
 import Hero from '../components/Hero'
 import Card from '../components/Card'
 
-import { useState, useEffect } from "react"
+import { useState, useEffect } from 'react'
 
-export default function Home() {
-
+export default function Home () {
   const [room, setRoom] = useState([])
 
-  // useEffect(() => {
-  //   fetch("http://localhost:8080/api/rooms")
-  //     .then((response) => response.json())
-  //     .then((data) => setRoom(data));
-  // }, []);
+  useEffect(() => {
+    fetch('http://localhost:8080/api/rooms')
+      .then((response) => response.json())
+      .then((data) => setRoom(data))
+  }, [])
 
   return (
     <>
       <Layout>
-      <Search />
+        <Search />
         <Hero
           heroImage={
-            "https://i.picsum.photos/id/943/600/500.jpg?hmac=FDXOi156vidMKBiwEiT5-oVIpP7X4dXd54S1-1xDQRM"
+            'https://i.picsum.photos/id/943/600/500.jpg?hmac=FDXOi156vidMKBiwEiT5-oVIpP7X4dXd54S1-1xDQRM'
           }
         />
         <main>
@@ -33,18 +32,23 @@ export default function Home() {
             <Card key={item.id} {...item} />
             ))}
             <Card
+            {
+              room.data?.map((item) => (
+                <Card key={item.id} {...item} />
+              ))
+            }
+            {/* <Card
               images={
                 "https://cf.bstatic.com/images/hotel/max1024x768/213/213503501.jpg"
               }
               price={"100.000"}
               location={"Medellín"}
-            />
+            /> */}
           </section>
         </main>
-
       </Layout>
     </>
-  );
+  )
 }
 
 // const mapStateToProps = ({ eventReducer }) => eventReducer

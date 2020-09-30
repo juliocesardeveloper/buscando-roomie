@@ -1,5 +1,6 @@
 import Header from '../components/Header'
 import Search from '../components/Search'
+import CardProfile from '../components/CardProfile'
 import Footer from '../components/Footer'
 
 import styles from '../styles/Components/Roomies.module.scss'
@@ -11,28 +12,8 @@ const Roomies = () => {
       <div className={styles.mainContainer}>
         <Search />
         <section className={styles.Cards}>
-            <h2>Conoce Roomies</h2>
-            <div className={styles.Container}>
-              <div className={styles.Card}>
-                <div className={styles.Super}>
-                  <div className={styles.Perfil}>
-                  </div>
-                </div>
-                <div className={styles.Infe}>
-                  <div className={styles.Text}>
-                    <h3>Name</h3>
-                  </div>
-                  <div className={styles.Buttons}>
-                    <button className={styles.like}>
-                      Me gusta
-                    </button>
-                    <button className={styles.noLike}>
-                      No me gusta
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <h2>Conoce Roomies</h2>
+          <CardProfile />
         </section>
       </div>
       <Footer />

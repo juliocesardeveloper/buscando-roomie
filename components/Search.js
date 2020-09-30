@@ -1,14 +1,23 @@
+
 import styles from '../styles/Components/Search.module.scss'
 
 const Search = () => {
   return (
     <>
-      <form className={styles.search} action="">
+      <form className={styles.search} >
         <input
-          type="search"
+          type="text"
           placeholder='Busca una habitación'
+          // name="searchText"
+          // autoComplete="off"
+          // value={searchText}
+          // onChange={handleInputChange}
         />
-        <button className={styles.searchIcon} type="submit"><img src='./searchIcon.svg' alt=""/></button>
+        <button
+          className={styles.searchIcon}
+          type="submit">
+          <img src='./searchIcon.svg' alt=""/>
+        </button>
       </form>
     </>
   )

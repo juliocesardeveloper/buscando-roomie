@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styles from '../styles/Components/Card.module.scss'
 
-const Card = ({ images, price, location }) => {
+const Card = ({ images, price, location, Perfil, ocupation }) => {
   // const { images, price, location } = data
   return (
     <Link href="/room/id">
@@ -14,13 +14,13 @@ const Card = ({ images, price, location }) => {
           className={styles.placePhoto}
           src={images}
           alt="place photo"/>
-        {/* <div className={styles.hostInfo}>
-          <img src={photoHost} alt="photo host"/>
-          <p>{hostName}</p>
-        </div> */}
+        <div className={styles.hostInfo}>
+          <img src={Perfil} alt="photo host"/>
+          <p>Name</p>
+        </div>
         <footer>
           <p>${price}MXN / mes</p>
-          <p>{location}</p>
+          <p>Roomie: {ocupation}/{location}</p>
         </footer>
       </section>
     </Link>
