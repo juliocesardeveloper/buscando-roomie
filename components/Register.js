@@ -1,7 +1,7 @@
+import PropTypes from 'prop-types'
 import style from "../styles/Components/Register.module.scss";
-import Link from "next/link";
 import { connect } from "react-redux";
-import { registerRequest } from "../actions/index";
+import { registerUser } from "../actions/index";
 import { useState } from "react";
 
 function Register({ handleClose, show, modal }) {
@@ -17,22 +17,21 @@ function Register({ handleClose, show, modal }) {
     phone: "",
   });
 
-  const handleInput = (event) => {
+  const updateInput = (event) => {
     setValues({
       ...form,
-      [event.target.name]: event.target.value,
-    });
-  };
+      [event.target.name]: event.target.value
+    })
+  }
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    props.loginRequest(form);
-    props.history.push("/");
-  };
+    event.preventDefault()
+    props.loginUser(form, '/login')
+  }
 
   const handleLogin = () => {
-    modal(2);
-  };
+    modal(2)
+  }
 
   return (
     <div className={showHideClassName}>
@@ -46,14 +45,14 @@ function Register({ handleClose, show, modal }) {
               id="name"
               name="name"
               placeholder="Nombre"
-              onChange={handleInput}
+              onChange={updateInput}
             />
             <input
               type="text"
               id="lname"
               name="lname"
               placeholder="Apellido"
-              onChange={handleInput}
+              onChange={updateInput}
             />
             <article>
               <section>
@@ -62,7 +61,7 @@ function Register({ handleClose, show, modal }) {
                   id="date"
                   name="date"
                   min="2018-01-01"
-                  onChange={handleInput}
+                  onChange={updateInput}
                 />
                 <input
                   type="text"
@@ -72,7 +71,7 @@ function Register({ handleClose, show, modal }) {
                   pattern="^[\w\._]{2,30}\+?[\w]{0,10}@[\w\.\-]{3,15}\.\w{2,7}$"
                   title="Usa una cuenta de correo válida"
                   required
-                  onChange={handleInput}
+                  onChange={updateInput}
                 />
                 <input
                   type="password"
@@ -80,11 +79,11 @@ function Register({ handleClose, show, modal }) {
                   name="password"
                   placeholder="Contraseña"
                   required
-                  onChange={handleInput}
+                  onChange={updateInput}
                 />
               </section>
               <section>
-                <select id="gender" name="sex" onChange={handleInput}>
+                <select id="gender" name="sex" onChange={updateInput}>
                   <option value="Hombre">Hombre</option>
                   <option value="Mujer">Mujer</option>
                   <option value="Otro">Otro</option>
@@ -97,7 +96,7 @@ function Register({ handleClose, show, modal }) {
                   pattern="^\d{7,11}$"
                   placeholder="Teléfono"
                   required
-                  onChange={handleInput}
+                  onChange={updateInput}
                 />
                 <input
                   type="password"
@@ -111,7 +110,7 @@ function Register({ handleClose, show, modal }) {
             <input type="submit" value="Ingresar" className="register-btn" />
           </form>
           <p>
-            ¿Ya tienes una cuenta?{" "}
+            ¿Ya tienes una cuenta?
             <span onClick={handleLogin}>Inicia sesión</span>
           </p>
         </div>
@@ -121,7 +120,11 @@ function Register({ handleClose, show, modal }) {
 }
 
 const mapDispatchToProps = {
-  registerRequest,
-};
+  registerUser
+}
 
-export default connect(null, mapDispatchToProps)(Register);
+Register.propTypes = {
+  registerUser: PropTypes.func
+}
+
+export default connect(null, mapDispatchToProps)(Register)
