@@ -9,6 +9,7 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
+    "axios": "^0.20.0",
     "next": "9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
