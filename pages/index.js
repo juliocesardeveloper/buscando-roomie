@@ -3,17 +3,16 @@ import Layout from '../components/Layout'
 import Search from '../components/Search'
 import Hero from '../components/Hero'
 import Card from '../components/Card'
-
-import { useState, useEffect } from 'react'
+import axios from 'axios'
+import { useState } from 'react'
 
 export default function Home() {
   const [room, setRoom] = useState([])
 
-  useEffect(() => {
-    fetch('http://localhost:8080/api/rooms')
-      .then((response) => response.json())
-      .then((data) => setRoom(data))
-  }, [])
+  axios.get('http://localhost:8080/api/rooms')
+    .then(function (results) {
+      setRoom(results.data)
+    })
 
   return (
     <>
@@ -29,7 +28,7 @@ export default function Home() {
           <section className={styles.main}>
             {
               room.data?.map((item) => (
-                <Card key={item.id} {...item} />
+                <Card key={item} {...item} />
               ))
             }
 
