@@ -7,13 +7,18 @@
   justify-content: space-between;
   align-self: center;
   justify-self: center;
-  margin: 1rem;
+  margin: 10rem 0 ;
   background-color:  #F6F8FF;
   border: 1px solid #50514F;
   border-radius: 10px;
   height: 40px;
   padding: 0 1rem;
   width: 700px;
+}
+
+.search:hover{
+  box-shadow: $value-shadow-searchs;
+
 }
 
 .search input{
@@ -23,7 +28,10 @@
   height: 38px;
   outline: none;
   width: 640px;
+  font-weight: 500;
+  font-size: 1.1em;
 }
+
 
 .searchIcon {
   background-color:  #F6F8FF;
