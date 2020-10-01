@@ -1,7 +1,7 @@
 @import "../variables.scss";
 
 .Card{
-    border: 1px solid $Primary-Gray;
+    border: 1px solid lightgray;
     border-radius: 10px;
     cursor: pointer;
     display: grid;
@@ -22,7 +22,7 @@
 
 .Perfil{
     background-color:$Primary-Gray;
-    border-radius: 10px;
+    border-radius: 20px;
     height: 100px;
     margin-top: 30px;
     width: 100px;

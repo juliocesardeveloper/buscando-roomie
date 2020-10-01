@@ -7,7 +7,7 @@ const Search = () => {
       <form className={styles.search} >
         <input
           type="text"
-          placeholder='Busca una habitación'
+          placeholder='Busca en una ciudad'
           // name="searchText"
           // autoComplete="off"
           // value={searchText}

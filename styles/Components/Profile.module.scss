@@ -1,6 +1,7 @@
 @import "../variables.scss";
 
 .container {
+  margin-top: 40px;
   color: $Primary-Gray;
   display: grid;
   grid-template-rows: 30% 30% 40%;
@@ -67,6 +68,11 @@
 .userData {
   justify-self: flex-end;
   margin-right: 20px;
+  text-align: center;
+  img {
+    object-fit: cover;
+    object-position: center center;
+  }
 }
 
 .contactUser {
