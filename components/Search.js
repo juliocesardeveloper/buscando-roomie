@@ -6,8 +6,12 @@ const Search = () => {
     <>
       <form className={styles.search} >
         <input
-          placeholder='Busca una habitación'
           type="text"
+          placeholder='Busca en una ciudad'
+          // name="searchText"
+          // autoComplete="off"
+          // value={searchText}
+          // onChange={handleInputChange}
         />
         <button
           className={styles.searchIcon}
