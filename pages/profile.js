@@ -6,7 +6,6 @@ import styles from '../styles/Components/Profile.module.scss'
 const Profile = () => {
   return (
     <>
-      <Header />
       <section className={styles.mainContainer}>
         <div className={styles.Perfil}>
           <div className={styles.Super}>
@@ -42,7 +41,6 @@ const Profile = () => {
           </div>
         </form>
       </section>
-      <Footer />
     </>
   )
 }

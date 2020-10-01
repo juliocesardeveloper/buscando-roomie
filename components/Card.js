@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import styles from '../styles/Components/Card.module.scss'
 
-const Card = ({ images, price, location, Perfil, ocupation }) => {
+const Card = ({ _id, images, price, location, Perfil, ocupation }) => {
   // const { images, price, location } = data
   return (
-    <Link href="/room/id">
+    <Link href={`/room/${_id}`}>
       <section className={styles.container}>
         {/* <img
           className={styles.like}
