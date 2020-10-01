@@ -6,7 +6,7 @@
   position: relative;
   width: 250px;
   height: 250px;
-  border: 1px solid $color-Border-Card;
+  border: 1px solid lightgray;
   border-radius:$border-value;
   cursor: pointer;
   margin: 50px;
@@ -45,7 +45,6 @@
 .hostInfo{
   width: 48px;
   height: 72px;
-  
   position: absolute;
   bottom: 30px;
   right: $border-value;
@@ -56,8 +55,10 @@
 
   img{
     border: 3px solid $color-Card;
-    height: 48px;
-    width: 48px;
     border-radius: $border-value;
+    height: 48px;
+    object-fit: cover;
+    object-position: center center;
+    width: 48px;
   }
 }

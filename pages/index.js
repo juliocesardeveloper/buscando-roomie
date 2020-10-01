@@ -6,7 +6,7 @@ import Card from '../components/Card'
 import axios from 'axios'
 import { useState } from 'react'
 
-export default function Home() {
+export default function Home () {
   const [room, setRoom] = useState([])
 
   axios.get('http://localhost:8080/api/rooms')
@@ -20,7 +20,7 @@ export default function Home() {
         <Search />
         <Hero
           heroImage={
-            'https://i.picsum.photos/id/943/600/500.jpg?hmac=FDXOi156vidMKBiwEiT5-oVIpP7X4dXd54S1-1xDQRM'
+            '/heroImage.png'
           }
         />
         <main>

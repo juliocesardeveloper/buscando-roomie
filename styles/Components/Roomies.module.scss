@@ -2,28 +2,22 @@
 
 .mainContainer{
   align-items: center;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 100px 1fr;
   font-family: $font-Family-Kumbh;
   justify-content: center;
-  min-height: 100vh;
 }
 
 .Cards{
+  align-items: center;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    height: 50vh;
-    width: 100%;
-    h2{
+    grid-template-rows: 50px 1fr;
+    grid-gap: 40px;
+    // height: 50vh;
+    // width: 100%;
+    justify-content: center;
+    h1{
       text-align: center;
       margin-top: 30px;
-      font-size: 50px;
     }
-}
-
-.Container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    height: 90%;
-    width: 100%;
 }

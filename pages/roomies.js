@@ -1,22 +1,21 @@
-import Header from '../components/Header'
+import Layout from '../components/Layout'
 import Search from '../components/Search'
 import CardProfile from '../components/CardProfile'
-import Footer from '../components/Footer'
 
 import styles from '../styles/Components/Roomies.module.scss'
 
 const Roomies = () => {
   return (
     <>
-      <Header />
-      <div className={styles.mainContainer}>
-        <Search />
-        <section className={styles.Cards}>
-          <h2>Conoce Roomies</h2>
-          <CardProfile />
-        </section>
-      </div>
-      <Footer />
+      <Layout>
+        <div className={styles.mainContainer}>
+          <Search />
+          <section className={styles.Cards}>
+            <h1>Conoce Roomies</h1>
+            <CardProfile />
+          </section>
+        </div>
+      </Layout>
     </>
   )
 }
