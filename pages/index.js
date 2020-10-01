@@ -3,16 +3,16 @@ import Layout from '../components/Layout'
 import Search from '../components/Search'
 import Hero from '../components/Hero'
 import Card from '../components/Card'
-import axios from 'axios'
-import { useState } from 'react'
+// import axios from 'axios'
+// import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+import useFetchCardRoom from '../hooks/useFetchCardRoom'
 
 export default function Home () {
-  const [room, setRoom] = useState([])
-
-  axios.get('http://localhost:8080/api/rooms')
-    .then(function (results) {
-      setRoom(results.data)
-    })
+  const router = useRouter()
+  const { rooms } = router.query
+  const { room } = useFetchCardRoom(rooms)
+  console.log(room)
 
   return (
     <>
@@ -20,15 +20,15 @@ export default function Home () {
         <Search />
         <Hero
           heroImage={
-            '/heroImage.png'
+            'https://i.picsum.photos/id/943/600/500.jpg?hmac=FDXOi156vidMKBiwEiT5-oVIpP7X4dXd54S1-1xDQRM'
           }
         />
         <main>
           <h1 className={styles.title}>Habitaciones disponibles</h1>
           <section className={styles.main}>
             {
-              room.data?.map((item) => (
-                <Card key={item} {...item} />
+              room.map((item) => (
+                <Card key={item.id} {...item} />
               ))
             }
 

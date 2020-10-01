@@ -32,6 +32,21 @@
   font-size: 1.1em;
 }
 
+.options {
+  background-color:  #F6F8FF;
+  font-size: 1rem;
+  border: none;
+  font-family: $font-Family-Kumbh;
+  height: 38px;
+  outline: none;
+  width: 130px;
+  option:hover {
+    background-color: $color-Card;
+    color:  #F6F8FF;
+    padding: 2px 0;
+  }
+}
+
 
 .searchIcon {
   background-color:  #F6F8FF;
@@ -54,19 +69,16 @@
 }
 
 // Mobile
-@media screen
-  and (device-width: 360px)
-  and (device-height: 640px)
-  and (-webkit-device-pixel-ratio: 2) {
-    .search {
-      width: 350px;
-    }
-}
+// @media screen
+//   and (device-width: 360px)
+//   and (device-height: 640px)
+//   and (-webkit-device-pixel-ratio: 2) {
+// }
 
 // Tablet
-@media only screen
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px)
-  and (-webkit-min-device-pixel-ratio: 1) {
+// @media only screen
+//   and (min-device-width: 768px)
+//   and (max-device-width: 1024px)
+//   and (-webkit-min-device-pixel-ratio: 1) {
 
-}
+// }
