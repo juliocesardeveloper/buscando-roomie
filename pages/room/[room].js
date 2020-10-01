@@ -3,9 +3,6 @@ import { useRouter } from 'next/router'
 import styles from '../../styles/Components/Room.module.scss'
 import useFetchRoom from '../../hooks/useFetchRoom'
 import Link from 'next/link'
-
-// const price = '100000'
-// const city = 'Medellín'
 const aboutRoom = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae blandit dignissim nullam quis lorem duis sollicitudin. Proin eget ipsum facilisi justo, pharetra, porttitor. Semper nunc id mi etiam scelerisque dolor proin aliquam. Et vulputate commodo sit enim amet gravida.'
 const services = ['Servicio 1', 'Servicio 2', 'Servicio 3', 'Servicio 4']
 const hostName = '{host}'

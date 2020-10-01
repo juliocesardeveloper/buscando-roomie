@@ -1,4 +1,3 @@
-import Layout from '../../components/Layout'
 import Carousel from '../../components/Carousel'
 import { useRouter } from 'next/router'
 import styles from '../../styles/Components/Room.module.scss'

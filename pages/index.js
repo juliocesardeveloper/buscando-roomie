@@ -9,7 +9,7 @@ export default function Home () {
   const [room, setRoom] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/rooms')
+    fetch('http://localhost:8080/api/rooms')
       .then((response) => response.json())
       .then((data) => setRoom(data))
   }, [])
