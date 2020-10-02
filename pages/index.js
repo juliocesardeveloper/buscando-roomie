@@ -25,14 +25,18 @@ export default function Home () {
           }
         />
         <main>
+
           <h1 className={styles.title}>Habitaciones disponibles</h1>
           <section className={styles.main}>
+            {room.data?.map((item) => (
+            <Card key={item.id} {...item} />
+            ))}
+            <Card
             {
               room.data?.map((item) => (
                 <Card key={item.id} {...item} />
               ))
             }
-
             {/* <Card
               images={
                 "https://cf.bstatic.com/images/hotel/max1024x768/213/213503501.jpg"
