@@ -1,4 +1,5 @@
 import styles from '../styles/Components/Home.module.scss'
+
 import Layout from '../components/Layout'
 import Search from '../components/Search'
 import Hero from '../components/Hero'

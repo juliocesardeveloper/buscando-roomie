@@ -1,8 +1,6 @@
 import Layout from '../../components/Layout'
-import Card from '../../components/Card'
 import { useRouter } from 'next/router'
 import styles from '../../styles/Components/Profile.module.scss'
-// import { useState, useEffect } from 'react'
 
 const hostName = 'David'
 const photoHost = 'https://www.eyescreamproductions.com/allaccess/wp-content/uploads/2012/11/2011DaveGrohlNMEAwardsDC200112.jpg'
@@ -49,9 +47,6 @@ const Profile = () => {
                 <p>{iLike}</p>
               </div>
             </div>
-          </section>
-          <section className={styles.cardsSection}>
-            <Card />
           </section>
         </main>
       </Layout>

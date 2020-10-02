@@ -1,38 +1,39 @@
-import styles from '../styles/Components/Search.module.scss'
-import { useFilter } from '../hooks/useFilter'
-import { useRouter } from 'next/router'
+import Card from '../components/Card'
 
-const cities = ['Baja California', 'Campeche', 'CDMX', 'Chiapas', 'Cuernavaca']
+import styles from '../styles/Components/Search.module.scss'
+
+import { useFilter } from '../hooks/useFilter'
+// import { useRouter } from 'next/router'
+import { getRoomsByCity } from '../selectors/getRoomsByCity'
+
+const cities = ['', 'Campeche', 'CDMX', 'Chiapas', 'Cuernavaca', 'Puebla']
 
 const Search = () => {
-  const router = useRouter()
+  // const router = useRouter()
   const [formValues, handleInputChange] = useFilter({
     searchText: ''
   })
 
   const { searchText } = formValues
 
-  const handleFilter = (e) => {
-    e.preventDefault()
-    router.push(`?q=${searchText}`)
-  }
+  const roomsFiltered = getRoomsByCity(searchText)
 
   return (
     <>
-      <form onSubmit={handleFilter} className={styles.search}>
+      <form className={styles.search}>
         <label>Escoge una ciudad:</label>
         <select className={styles.options} id="cities" name="searchText" value={searchText} onChange={handleInputChange}>
           {cities.map((item, index) => (
             <option key={index}>{ item }</option>
           ))}
         </select>
-        <button
-          className={styles.searchIcon}
-          type="submit"
-        >
-          <img src='./searchIcon.svg' alt=""/>
-        </button>
       </form>
+      <h1>Resultados de búsqueda</h1>
+      {
+        roomsFiltered.map((item) => (
+          <Card key={item.id} {...item} />
+        ))
+      }
     </>
   )
 }
