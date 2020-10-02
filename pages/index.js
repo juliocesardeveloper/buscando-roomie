@@ -3,18 +3,18 @@ import Layout from '../components/Layout'
 import Search from '../components/Search'
 import Hero from '../components/Hero'
 import Card from '../components/Card'
+import PageLoading from '../components/PageLoading'
 
-import { useState, useEffect } from "react"
+import { useState, useEffect } from 'react'
 
-export default function Home() {
-
+export default function Home () {
   const [room, setRoom] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/rooms")
+    fetch('http://localhost:8080/api/rooms')
       .then((response) => response.json())
-      .then((data) => setRoom(data));
-  }, []);
+      .then((data) => setRoom(data))
+  }, [])
 
   return (
     <>
@@ -35,7 +35,7 @@ export default function Home() {
 
       </Layout>
     </>
-  );
+  )
 }
 
 // const mapStateToProps = ({ eventReducer }) => eventReducer
