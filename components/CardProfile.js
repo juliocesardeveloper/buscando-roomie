@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import styles from '../styles/Components/CardProfile.module.scss'
 
-const CardProfile = ({ Perfil }) => {
+const CardProfile = ({ _id, Perfil }) => {
   return (
-    <Link href="/profile/id">
+    <Link href={`/perfiles/${_id}`}>
       <section className={styles.container}>
         <div className={styles.Container}>
           <div className={styles.Card}>

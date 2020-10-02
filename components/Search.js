@@ -28,7 +28,6 @@ const Search = () => {
           ))}
         </select>
       </form>
-      <h1>Resultados de búsqueda</h1>
       {
         roomsFiltered.map((item) => (
           <Card key={item.id} {...item} />

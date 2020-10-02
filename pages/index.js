@@ -17,13 +17,13 @@ export default function Home () {
   return (
     <>
       <Layout>
-        <Search />
         <Hero
           heroImage={
             'https://i.picsum.photos/id/943/600/500.jpg?hmac=FDXOi156vidMKBiwEiT5-oVIpP7X4dXd54S1-1xDQRM'
           }
         />
-        <main>
+        <Search />
+        <main id="main">
           <h1 className={styles.title}>Habitaciones disponibles</h1>
           <section className={styles.main}>
             {
