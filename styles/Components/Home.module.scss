@@ -127,3 +127,18 @@
     flex-direction: column;
   }
 }
+
+@media screen and (min-width:425px) and ( max-width:599px) {
+  .main{
+    width:100%;
+    justify-content: center;
+    margin: 0;
+    grid-template: none;
+    margin-bottom: 15px;
+  }
+
+  .title{
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+}
