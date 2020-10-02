@@ -1,6 +1,10 @@
 @import "../variables.scss";
 
+.father{
+  width: 90vw;
+}
 .container {
+  width: 100vw;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -8,9 +12,11 @@
   justify-content: center;
   min-height: 100vh;
   padding: 0 0.5rem;
+  
 }
 
 .main {
+  width: 100%;
   align-items: center;
   justify-content: center;
   display: grid;
@@ -19,6 +25,7 @@
   grid-template-rows: repeat(300px);
   padding: 0 1rem;
   margin-bottom: 5rem;
+  align-content: center;
 }
 
 .footer {

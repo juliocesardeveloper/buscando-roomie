@@ -23,7 +23,7 @@ export default function Home() {
         <Hero
           heroImage={ '/heroImage.png'}
         />
-        <main>
+        <main className={styles.father}>
           <h1 className={styles.title}>Habitaciones disponibles</h1>
           <section className={styles.main}>
             {room.data?.map((item) => (
