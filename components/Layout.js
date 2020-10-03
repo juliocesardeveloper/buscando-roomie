@@ -7,7 +7,7 @@ import AnnouncingRoom from '../components/AnnouncingRoom'
 
 import { useState, useEffect } from 'react'
 
-export default function Layout(props) {
+export default function Layout (props) {
   const { children } = props
 
   const [room, setRoom] = useState([])
