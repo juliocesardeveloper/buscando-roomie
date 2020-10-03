@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import style from '../styles/Components/Register.module.scss'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 
 function Register ({ handleClose, show, modal, props }) {
   const showHideClassName = show ? style.principalContainer : style.displayNone
@@ -15,15 +16,34 @@ function Register ({ handleClose, show, modal, props }) {
     phone: ''
   })
 
+  useEffect(() => {
+
+  }, [])
+
   const updateInput = (event) => {
     setValues({
       ...form,
       [event.target.name]: event.target.value
     })
+    console.log(form)
   }
 
   const handleSubmit = (event) => {
     event.preventDefault()
+    const url = 'http://localhost:8080/api/auth/sign-up'
+    axios({
+      method: 'POST',
+      url: url,
+      data: {
+        name: form.name,
+        email: form.email,
+        password: form.password,
+        data: Date.now(),
+        phone: form.phone
+      }
+    }).then(alert('registro exitoso'))
+      .then(modal(0))
+      .catch((error) => alert(error))
   }
 
   const handleLogin = () => {
