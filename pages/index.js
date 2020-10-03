@@ -4,7 +4,6 @@ import Search from '../components/Search'
 import Hero from '../components/Hero'
 import Card from '../components/Card'
 import PageLoading from '../components/PageLoading'
-
 import { useState, useEffect } from 'react'
 
 export default function Home () {
@@ -36,8 +35,3 @@ export default function Home () {
     </>
   )
 }
-
-// const mapStateToProps = ({ eventReducer }) => eventReducer
-// const mapDispatchToProps = {
-//   getEventRecents
-// }
