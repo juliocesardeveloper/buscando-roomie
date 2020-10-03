@@ -9,15 +9,8 @@ import { useState, useEffect } from 'react'
 
 export default function Layout (props) {
   const { children } = props
-
   const [room, setRoom] = useState([])
   const [dato, setDato] = useState(0)
-
-  // useEffect(() => {
-  //   fetch("http://localhost:8080/api/rooms")
-  //     .then((response) => response.json())
-  //     .then((data) => setRoom(data));
-  // }, []);
 
   let [login, setLogin] = useState(false)
   let [register, setRegister] = useState(false)
@@ -28,6 +21,9 @@ export default function Layout (props) {
       setLogin((login = false))
     } else if (dato === 2) {
       setLogin((login = true))
+      setRegister((register = false))
+    } else if (dato === 0) {
+      setLogin((login = false))
       setRegister((register = false))
     }
   })

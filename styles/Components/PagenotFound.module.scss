@@ -1,0 +1,10 @@
+@import '../variables.scss';
+
+.father{
+    font-family:$font-Family-Kumbh;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    font-size: 15px;
+    text-align: center;
+}

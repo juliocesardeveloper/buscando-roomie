@@ -1,6 +1,5 @@
 import Search from '../components/Search'
 import CardProfile from '../components/CardProfile'
-
 import styles from '../styles/Components/Roomies.module.scss'
 
 const Roomies = () => {
