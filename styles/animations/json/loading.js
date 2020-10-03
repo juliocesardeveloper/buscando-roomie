@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Lottie from 'react-lottie'
 import animationData from './loading.json'
+import styles from '../../Components/Page-loading.module.scss'
 
 class Loading extends Component {
   render () {
@@ -14,9 +15,9 @@ class Loading extends Component {
     }
 
     return (
-      <div className="Uncontrolled">
-        <h1>cargando . . .</h1>
-        <Lottie options={defaultOptions} height={600} width={900} />
+      <div className={styles.father}>
+        <h1>Cargando . . .</h1>
+        <Lottie options={defaultOptions}/>
       </div>
     )
   }
