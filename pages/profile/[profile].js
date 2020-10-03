@@ -1,4 +1,3 @@
-import Layout from '../../components/Layout'
 import Carousel from '../../components/Carousel'
 import { useRouter } from 'next/router'
 import styles from '../../styles/Components/Room.module.scss'
@@ -16,35 +15,33 @@ const Room = () => {
   const { room } = router.query
   return (
     <>
-      <Layout>
-        <Carousel />
-        <section className={styles.containerDetails}>
-          <article className={styles.infoRoom}>
-            <h2>${price}COP / en {city}</h2>
-            <h2>Sobre la habitación</h2>
-            <p>{aboutRoom}</p>
-            <h2>Servicios</h2>
-            <ul>
-              {services.map((item, index) => (
-                <li key={index}>{ item }</li>
-              ))}
-            </ul>
-            <h2>Sobre la ubicación</h2>
-            <p>{aboutRoom}</p>
+      <Carousel />
+      <section className={styles.containerDetails}>
+        <article className={styles.infoRoom}>
+          <h2>${price}COP / en {city}</h2>
+          <h2>Sobre la habitación</h2>
+          <p>{aboutRoom}</p>
+          <h2>Servicios</h2>
+          <ul>
+            {services.map((item, index) => (
+              <li key={index}>{ item }</li>
+            ))}
+          </ul>
+          <h2>Sobre la ubicación</h2>
+          <p>{aboutRoom}</p>
+        </article>
+        <article className={styles.infoHost}>
+          <h2>Sobre {hostName}</h2>
+          <img className={styles.photoHost} src={photoHost} alt="Photo host"/>
+          <p>{aboutRoom}</p>
+          <small>Te gustó la habitación?</small>
+          <small>Comunicate con {hostName}</small>
+          <article>
+            <a href="/"><img src="/whatsapp.svg" alt=""/></a>
+            <a href="/"><img src="/email.svg" alt=""/></a>
           </article>
-          <article className={styles.infoHost}>
-            <h2>Sobre {hostName}</h2>
-            <img className={styles.photoHost} src={photoHost} alt="Photo host"/>
-            <p>{aboutRoom}</p>
-            <small>Te gustó la habitación?</small>
-            <small>Comunicate con {hostName}</small>
-            <article>
-              <a href="/"><img src="/whatsapp.svg" alt=""/></a>
-              <a href="/"><img src="/email.svg" alt=""/></a>
-            </article>
-          </article>
-        </section>
-      </Layout>
+        </article>
+      </section>
     </>
   )
 }

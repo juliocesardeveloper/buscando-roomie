@@ -5,8 +5,7 @@ import styles from '../styles/Components/Profile.module.scss'
 const Profile = () => {
   return (
     <>
-    <Layout>
-    <section className={styles.mainContainer}>
+      <section className={styles.mainContainer}>
         <div className={styles.Perfil}>
           <div className={styles.Super}>
             <div className={styles.Foto}></div>
@@ -41,8 +40,6 @@ const Profile = () => {
           </div>
         </form>
       </section>
-    </Layout>
-
     </>
   )
 }
