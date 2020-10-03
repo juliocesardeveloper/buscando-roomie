@@ -1,17 +1,8 @@
-import "../styles/globals.scss";
-import { Provider } from "react-redux";
-import { createStore } from "redux";
-import reducer from "../reducers/index";
+import '../styles/globals.scss'
 
 function MyApp ({ Component, pageProps }) {
-	
-const initialState = { user: {} };
-const store = createStore(reducer, initialState);
-
   return (
-    <Provider store={store}>
-      <Component {...pageProps} />
-    </Provider>
-  );
+    <Component {...pageProps} />
+  )
 }
-export default MyApp;
+export default MyApp

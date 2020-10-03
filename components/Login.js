@@ -1,7 +1,4 @@
 import style from '../styles/Components/Login.module.scss'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { loginRequest } from '../actions/index'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
@@ -33,7 +30,6 @@ function Login ({ handleClose, show, modal, props }) {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    props.loginRequest('/')
   }
 
   const handleRegister = () => {
@@ -79,12 +75,4 @@ function Login ({ handleClose, show, modal, props }) {
   )
 }
 
-const mapDispatchToProps = {
-  loginRequest
-}
-
-Login.propTypes = {
-  loginUser: PropTypes.func
-}
-
-export default connect(null, mapDispatchToProps)(Login)
+export default Login

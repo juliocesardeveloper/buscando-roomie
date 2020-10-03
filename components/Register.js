@@ -1,11 +1,9 @@
 import PropTypes from 'prop-types'
-import style from '../styles/Components/Register.module.scss';
-import { connect } from 'react-redux';
-import { registerRequest } from '../actions/index';
-import { useState } from 'react';
+import style from '../styles/Components/Register.module.scss'
+import { useState } from 'react'
 
 function Register ({ handleClose, show, modal, props }) {
-  const showHideClassName = show ? style.principalContainer : style.displayNone;
+  const showHideClassName = show ? style.principalContainer : style.displayNone
 
   const [form, setValues] = useState({
     email: '',
@@ -14,8 +12,8 @@ function Register ({ handleClose, show, modal, props }) {
     password: '',
     date: '',
     sex: '',
-    phone: '',
-  });
+    phone: ''
+  })
 
   const updateInput = (event) => {
     setValues({
@@ -26,7 +24,6 @@ function Register ({ handleClose, show, modal, props }) {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    props.registerRequest(form, '/login')
   }
 
   const handleLogin = () => {
@@ -116,15 +113,7 @@ function Register ({ handleClose, show, modal, props }) {
         </div>
       </article>
     </div>
-  );
+  )
 }
 
-const mapDispatchToProps = {
-  registerRequest
-}
-
-Register.propTypes = {
-  registerUser: PropTypes.func
-}
-
-export default connect(null, mapDispatchToProps)(Register)
+export default Register

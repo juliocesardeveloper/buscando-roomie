@@ -7,13 +7,13 @@
   justify-content: space-between;
   align-self: center;
   justify-self: center;
-  margin: 10rem 0 ;
+   margin: 5rem 0 ;
   background-color:  #F6F8FF;
   border: 1px solid #50514F;
   border-radius: 10px;
   height: 40px;
   padding: 0 1rem;
-  width: 700px;
+  width: 80%;
 }
 
 .search:hover{
@@ -59,7 +59,7 @@
   and (device-height: 640px)
   and (-webkit-device-pixel-ratio: 2) {
     .search {
-      width: 350px;
+      width: 70%;
     }
 }
 
@@ -69,4 +69,11 @@
   and (max-device-width: 1024px)
   and (-webkit-min-device-pixel-ratio: 1) {
 
+}
+
+@media screen and (min-width:425px) and ( max-width:599px) {
+  .search{
+    width:80%;
+    margin:4rem;
+  }
 }
