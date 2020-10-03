@@ -3,16 +3,12 @@ import { useRouter } from 'next/router'
 import styles from '../../styles/Components/Room.module.scss'
 import useFetchRoom from '../../hooks/useFetchRoom'
 import Link from 'next/link'
-const aboutRoom = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae blandit dignissim nullam quis lorem duis sollicitudin. Proin eget ipsum facilisi justo, pharetra, porttitor. Semper nunc id mi etiam scelerisque dolor proin aliquam. Et vulputate commodo sit enim amet gravida.'
-const services = ['Servicio 1', 'Servicio 2', 'Servicio 3', 'Servicio 4']
 const hostName = '{host}'
 
 const Room = () => {
   const router = useRouter()
   const { room } = router.query
-  console.log(room)
   const { data, loading } = useFetchRoom(room)
-  console.log(data)
 
   return (
     <>
@@ -26,12 +22,15 @@ const Room = () => {
               <p>{data.description}</p>
               <h2>Servicios</h2>
               <ul>
-                {services.map((item, index) => (
-                  <li key={index}>{ item }</li>
-                ))}
+                {data.wc ? <li><span><img src="/wc.png" alt="baño privado"/> Baño privado</span></li> : <></>}
+                {data.Wifi ? <li><span><img src="/wifi.png" alt="Wifi"/> Wifi</span></li> : <></>}
+                {data.Desayuno ? <li><span><img src="/breakfast.png" alt="Desayuno"/> Desayuno</span></li> : <></>}
+                {data.Lavanderia ? <li><span><img src="/laundry.png" alt="Lavanderia"/> Lavanderia</span></li> : <></>}
+                {data.Telefono ? <li><span><img src="/phone.png" alt="Teléfono"/> Teléfono</span></li> : <></>}
+                {data.Tv ? <li><span><img src="/tv.png" alt="TV"/> TV</span></li> : <></>}
               </ul>
               <h2>Sobre la ubicación</h2>
-              <p>{aboutRoom}</p>
+              <p>{data.DescriptionLocal}</p>
             </article>
             <article className={styles.infoHost}>
               <h2>{hostName}</h2>

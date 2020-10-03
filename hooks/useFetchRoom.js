@@ -9,7 +9,7 @@ const useFetchRoom = (roomId) => {
     const fetchRoom = async () => {
       setLoading(true)
       try {
-        const result = await axios.get(`http://localhost:8000/api/rooms/${roomId}`)
+        const result = await axios.get(`http://localhost:8080/api/rooms/${roomId}`)
         setData(result.data.data)
         setLoading(false)
       } catch (error) {
