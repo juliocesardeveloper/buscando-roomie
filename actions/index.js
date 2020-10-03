@@ -11,32 +11,31 @@ export const registerRequest = (payload) => ({
 });
 
 export const registerUser = (payload, redirectUrl) => ({
-  return (dispatch) => {
-    axios.post('', payload)
-    .then(({ data }) => dispatch(registerRequest(data)))
-    .then(() => { window.location.href = redirectUrl })
-    .catch( error => dispatch(setError(error)) )
-  }
+  // return (dispatch) => {
+  //   axios.post('', payload)
+  //   .then(({ data }) => dispatch(registerRequest(data)))
+  //   .then(() => { window.location.href = redirectUrl })
+  //   .catch( error => dispatch(setError(error)) )
+  // }
 });
 
 export const loginUser = ({ email, password }, redirectUrl ) => ({
-  return (dispatch) => {
-    axios( 
-      url:'',
-      method: 'post',
-      auth: {
-        username: email,
-        password
-      } 
-    )
-    .then(({ data }) => {
-      document.cookie = `email = ${data.user.email}`
-      document.cookie = `name = ${data.user.name}`
-      document.cookie = `id = ${data.user.id}`
-      dispatch(loginRequest(data.user))
-    })
-    .then(() => { window.location.href = redirectUrl })
-    .catch( error => dispatch(setError(error)) )
-  }
+  // return (dispatch) => {
+  //   axios( 
+  //     url:'',
+  //     method: 'post',
+  //     auth: {
+  //       username: email,
+  //       password
+  //     } 
+  //   )
+  //   .then(({ data }) => {
+  //     document.cookie = `email = ${data.user.email}`
+  //     document.cookie = `name = ${data.user.name}`
+  //     document.cookie = `id = ${data.user.id}`
+  //     dispatch(loginRequest(data.user))
+  //   })
+  //   .then(() => { window.location.href = redirectUrl })
+  //   .catch( error => dispatch(setError(error)) )
+  // }
 });
-
