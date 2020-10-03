@@ -40,10 +40,25 @@
   flex-direction: column;
   font-family: $font-Family-Kumbh;
   font-size: 12px;
+  background-color: #99afff;
+  color: black;
   justify-content: space-evenly;
   min-width: -moz-available;
   min-width: -webkit-fill-available;
 }
+
+@media only screen and (min-width: 530px){
+
+	.footer-contacto-elements{
+    display: flex;
+    >p{
+      margin: 10px 10px;
+    }
+  } 
+	
+}
+
+
 @media only screen and (min-width:1024px) {
   .footer {
     flex-direction: row;
