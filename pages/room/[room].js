@@ -4,7 +4,6 @@ import styles from '../../styles/Components/Room.module.scss'
 import useFetchRoom from '../../hooks/useFetchRoom'
 import Link from 'next/link'
 import PageLoading from '../../components/PageLoading'
-import Layout from '../../components/Layout'
 const hostName = '{host}'
 
 const Room = () => {
@@ -13,7 +12,7 @@ const Room = () => {
   const { data, loading } = useFetchRoom(room)
 
   return (
-    <Layout>
+    <>
       {loading ? <PageLoading /> : (
         <>
           <Carousel />
@@ -48,7 +47,7 @@ const Room = () => {
           </section>
         </>
       )}
-    </Layout>
+    </>
   )
 }
 
