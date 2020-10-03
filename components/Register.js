@@ -43,7 +43,7 @@ function Register ({ handleClose, show, modal, props }) {
       }
     }).then(alert('registro exitoso'))
       .then(modal(0))
-      .catch((error) => alert(error))
+      .catch((error) => console.log(error))
   }
 
   const handleLogin = () => {

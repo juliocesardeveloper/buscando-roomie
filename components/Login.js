@@ -25,7 +25,7 @@ function Login ({ handleClose, show, modal, props }) {
   const handleSubmit = (event) => {
     event.preventDefault()
     const url = 'http://localhost:8080/api/auth/sign-in'
-    const token = Buffer.from(`${form.username}:${form.password}`, 'utf8').toString('base64')
+    const token = Buffer.from(`${form.email}:${form.password}`, 'utf8').toString('base64')
     axios({
       method: 'POST',
       url: url,
