@@ -6,19 +6,20 @@ const useFetchRoom = (roomId) => {
   const [loading, setLoading] = useState('true')
 
   useEffect(() => {
-    const fetchRoom = async () => {
-      setLoading(true)
-      try {
-        const result = await axios.get(`http://localhost:8080/api/rooms/${roomId}`)
-        setData(result.data.data)
-        setLoading(false)
-      } catch (error) {
-        console.log(error)
-        setLoading(false)
+    if (roomId) {
+      const fetchRoom = async () => {
+        setLoading(true)
+        try {
+          const result = await axios.get(`http://localhost:8080/api/rooms/${roomId}`)
+          setData(result.data.data)
+          setLoading(false)
+        } catch (error) {
+          console.log(error)
+          setLoading(false)
+        }
       }
+      fetchRoom()
     }
-
-    fetchRoom()
   }, [])
 
   return { data, loading }

@@ -60,9 +60,14 @@
 @media screen  and  (min-width:425px) and  (max-width:599px) {
   .containerDetails{
     padding: 20px;
+    flex-direction: column-reverse;
   }
 
   .infoRoom{
     padding: 5px;
+  }
+
+  .infoHost{
+    margin:  0 auto;
   }
 }

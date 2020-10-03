@@ -3,6 +3,8 @@ import { useRouter } from 'next/router'
 import styles from '../../styles/Components/Room.module.scss'
 import useFetchRoom from '../../hooks/useFetchRoom'
 import Link from 'next/link'
+import PageLoading from '../../components/PageLoading'
+import Layout from '../../components/Layout'
 const hostName = '{host}'
 
 const Room = () => {
@@ -11,8 +13,8 @@ const Room = () => {
   const { data, loading } = useFetchRoom(room)
 
   return (
-    <>
-      {loading ? <h1>Cargando</h1> : (
+    <Layout>
+      {loading ? <PageLoading /> : (
         <>
           <Carousel />
           <section className={styles.containerDetails}>
@@ -46,7 +48,7 @@ const Room = () => {
           </section>
         </>
       )}
-    </>
+    </Layout>
   )
 }
 
