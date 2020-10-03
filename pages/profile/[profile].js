@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import styles from '../../styles/Components/Profile.module.scss'
 import useFetchProfile from '../../hooks/useFetchProfile'
+import PageLoading from '../../components/PageLoading'
 
 const photoHost = 'https://www.eyescreamproductions.com/allaccess/wp-content/uploads/2012/11/2011DaveGrohlNMEAwardsDC200112.jpg'
 const gender = 'Masculino'
@@ -12,7 +13,7 @@ const Profile = () => {
   const { data, loading } = useFetchProfile(profile)
   return (
     <>
-      {loading ? <h1>Cargando</h1> : (
+      {loading ? <PageLoading /> : (
         <>
           <main className={styles.container}>
             <section className={styles.user}>
