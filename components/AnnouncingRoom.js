@@ -1,6 +1,4 @@
 import style from '../styles/Components/AnnouncingRoom.module.scss'
-import { connect } from 'react-redux'
-import { loginRequest } from '../actions/index'
 import { useState } from 'react'
 
 function AnnouncingRoom ({ handleClose, show, modal, props }) {
@@ -19,8 +17,6 @@ function AnnouncingRoom ({ handleClose, show, modal, props }) {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    props.loginRequest(form)
-    props.history.push('/')
   }
 
   return (
@@ -87,8 +83,4 @@ function AnnouncingRoom ({ handleClose, show, modal, props }) {
   )
 }
 
-const mapDispatchToProps = {
-  loginRequest
-}
-
-export default connect(null, mapDispatchToProps)(AnnouncingRoom);
+export default AnnouncingRoom
